@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ducument</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!-- TAB BUTTON -->
+        <div class="d-flex align-items-start">
+            <div class="aside-menu-bar">
+                <div class="navigation-bar"> 
+                    <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                    <div class="nav flex-column nav-pills">
+                        <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                        <li class="nav-link"><a href="./pos-payments.html"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                        <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-link.html">Payment Link</a></li>
+                                <li class="nav-link"><a href="./pos-donations.html">Donations</a></li>
+                                <li class="nav-link"><a href="./pos-subscriptions.html" class="active">Subscriptions</a></li>
+                                <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                        <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                        <li class="nav-link"><a href="./pos-fiat-withdrawals.html"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                        <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                        <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-settings.html">Payment settings</a></li>
+                                <li class="nav-link"><a href="./pos-account-settings.html">Account settings</a></li>
+                                <li class="nav-link"><a href="./pos-coins-settings.html">Coins settings</a></li>
+                            </ul></li>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                        <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                    </ul>
+                    <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+                </div>
+            </div>
+            
+
+            <!-- subscription -->
+            <div class="tab-pane" id="subscription">
+                <div class="subscription-content">
+                    <div class="title">
+                        <h2>Subscriptions</h2>
+                    </div>
+                    <div class="subscription-row">
+                        <div class="plus-btn payment-btn m-0 me-3" data-bs-toggle="modal" data-bs-target="#subscription-invoice-Modal">
+                            <a href="#">+</a>
+                        </div>
+
+                        <!-- subscription invoice modal -->
+                        <div class="modal fade" id="subscription-invoice-Modal" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content modal-box">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <div class="modal-body">
+                                        <h5 class="modal-title text-center mb-5">Invoice creation <span class="iconify" data-icon="fluent:question-circle-16-filled" style="color: #85a4fa;"></span></h5>
+                                        <div class="subscription-form">
+                                            <form>
+                                                <div class="order-info">
+                                                    <label for="order-information">Order description:</label>
+                                                    <input type="text" id="order-information" placeholder="optional">
+                                                </div>
+                                                <div class="order-id">
+                                                    <label for="order-id">Order id:</label>
+                                                    <input type="text" id="order-id" placeholder="optional">
+                                                </div>
+                                                <div class="price-currency">
+                                                    <label for="price-currency">Pay currency:</label>
+                                                    <input type="text" id="price-currency" placeholder="optional">
+                                                </div>
+                                                <div class="price-value">
+                                                    <label for="price-value">Price</label>
+                                                    <div class="usd-currency position-relative">
+                                                        <input type="text" id="price-value">
+                                                        <span class="position-absolute">USD</span>
+                                                    </div>
+                                                </div>
+                                                <div class="payment-btn justify-content-center mt-4">
+                                                    <a href="#" id="generateBtn" data-bs-dismiss="modal">Create Invoice</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="subscription-invoice">
+                            <span>Invoice ID</span>
+                            <input class="styles_textField__2gPT3" type="text" id="result">
+                        </div>
+                        <div class="subscription-frequency">
+                            <span>Frequency</span>
+                            <input class="styles_textField__2gPT3" type="number" min="0" max="" placeholder="Optional" value="1">
+                            <div class="interval-btn">
+                                <button>7d</button>
+                                <button>14d</button>
+                                <button>30d</button>
+                            </div>
+                        </div>
+                        <div class="payment-btn m-0">
+                            <a href="#" class="subscription-btn m-0">Create Subscription Group</a>
+                        </div>
+                    </div>
+                    <div class="subscription-table">
+                        <div class="table-head">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Invoice ID</th>
+                                        <th>Order ID</th>
+                                        <th>Order Description</th>
+                                        <th>Price</th>
+                                        <th>No. of Subs</th>
+                                        <th>Frequency</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>6002486200</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>3454</td>
+                                        <td></td>
+                                        <td>7d</td>
+                                        <td class="payment-btn"><a href="#" data-bs-toggle="modal" data-bs-target="#subsciption-edit-btn-modal">edit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6002486200</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>3454</td>
+                                        <td></td>
+                                        <td>7d</td>
+                                        <td class="payment-btn"><a href="#" data-bs-toggle="modal" data-bs-target="#subsciption-edit-btn-modal">edit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6002486200</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>3454</td>
+                                        <td></td>
+                                        <td>7d</td>
+                                        <td class="payment-btn"><a href="#" data-bs-toggle="modal" data-bs-target="#subsciption-edit-btn-modal">edit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6002486200</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>3454</td>
+                                        <td></td>
+                                        <td>7d</td>
+                                        <td class="payment-btn"><a href="#" data-bs-toggle="modal" data-bs-target="#subsciption-edit-btn-modal">edit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- subsciption-edit-btn-modal -->
+            <div class=" subsciption-edit-btn-modal modal fade" id="subsciption-edit-btn-modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-box">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="title justify-content-center">
+                            <h3 class="">Subscription group edit</h3>
+                        </div>
+                        <form>
+                            <div class="invite-email d-flex align-items-center justify-content-between position-relative mb-4">
+                                <label for="invite-email">Invite email</label>
+                                <input type="email" placeholder="example@gmail.com">
+                                <label class="file-label" for="file-upload">Click to upload.</label>
+                                <input type="file" accept="text.csv" class="position-absolute" id="file-upload">
+                            </div>
+                            <div class="invite-email d-flex align-items-center justify-content-between position-relative">
+                                <label for="invite-email">Invite email</label>
+                                <input type="email" placeholder="example@gmail.com">
+                                <div class="payment-btn m-0">
+                                    <a href="#">Send Invite</a>
+                                </div>
+                                <div class="delete-btn">
+                                    <span class="iconify" data-icon="mdi:bin"></span>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <!--  jquary cdn  -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <!-- iconify -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- my js -->
+        <script src="./js/script.js"></script>
+        <script>
+            const generateBtn = document.getElementById("generateBtn");
+            const result = document.getElementById("result");
+
+            generateBtn.addEventListener("click", function() {
+                let pin = "";
+                for (let i = 0; i < 10; i++) {
+                pin += Math.floor(Math.random() * 10);
+                }
+                result.value = pin;
+            });
+        </script>
+    </body>
+</html>

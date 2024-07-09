@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light-wrktestpos</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="light-worktestpos-section">
+        <div class="light-worktestpos-box">
+            <div class="light-worktestpos-logobox">
+                <h1 class="text-center">NOWPayments</h1>
+                <div class="light-worktestpos-usd d-flex align-items-center">
+                    <img src="./img/usd.svg"/>
+                    <span>USD</span>
+                </div>
+            </div>
+            <div class="light-worktestpos">
+                <div class="light-worktestpos-inputbox">
+                    <input id="input" class="input" value="20" type="text"/>
+                </div>
+                <div class="light-worktestpos-number d-flex">
+                    <button class="button">1</button>
+                    <button class="button">2</button>
+                    <button class="button">3</button>
+                </div>
+                <div class="light-worktestpos-number d-flex">
+                    <button class="button">4</button>
+                    <button class="button">5</button>
+                    <button class="button">6</button>
+                </div>
+                <div class="light-worktestpos-number d-flex">
+                    <button class="button">7</button>
+                    <button class="button">8</button>
+                    <button class="button">9</button>
+                </div>
+                <div class="light-worktestpos-number d-flex">
+                    <button class="button">00</button>
+                    <button class="button">0</button>
+                    <button class="button">.</button>
+                </div>
+                <div class="light-worktestpos-number light-worktestpos-buttom-number d-flex">
+                    <button id="clear" class="buttom-button close"><span class="iconify" data-icon="carbon:close-outline" style="color: white;" data-width="23" data-height="23"></span></button>
+                    <button id="backspace" class="buttom-button backspace"><span class="iconify" data-icon="ph:backspace-light" style="color: white;" data-width="23" data-height="23"></span></button>
+                    <a href="./light-worktestpos-search.html"><button class="buttom-button right"><span class="iconify" data-icon="material-symbols:arrow-right-alt" style="color: white;" data-width="23" data-height="23"></span></button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--  jquary cdn  -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<!-- bootstrap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+<!-- iconify -->
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<!-- my js -->
+<!-- <script src="./js/script.js"></script>  -->
+<script>
+    let calc = "";
+    let value = document.querySelector('.input').value;
+    let buttons = document.querySelectorAll(".button");
+    Array.from(buttons).forEach((button)=>{
+    button.addEventListener('click', (e)=>{
+        calc = calc + e.target.innerHTML;
+        document.querySelector('.input').value = calc;
+        })
+    })
+    let clearbtn = document.getElementById("clear");
+    clearbtn.addEventListener("click", ()=>{
+        document.querySelector('.input').value = "";
+        calc = "";
+    })
+
+    backspace.addEventListener("click", () => {
+          let value = document.querySelector(".input").value;
+          document.querySelector(".input").value = value.substr(0, value.length - 1);
+          calc = value.substr(0, value.length - 1);
+    });
+    
+</script>      
+    
+
+</body>
+</html>

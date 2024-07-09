@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ducument</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!-- TAB BUTTON -->
+        <div class="d-flex align-items-start">
+            <div class="aside-menu-bar">
+                <div class="navigation-bar"> 
+                    <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                    <div class="nav flex-column nav-pills">
+                        <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                        <li class="nav-link"><a href="./pos-payments.html"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                        <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-link.html">Payment Link</a></li>
+                                <li class="nav-link"><a href="./pos-donations.html" class="active">Donations</a></li>
+                                <li class="nav-link"><a href="./pos-subscriptions.html">Subscriptions</a></li>
+                                <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                        <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                        <li class="nav-link"><a href="./pos-fiat-withdrawals.html"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                        <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                        <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-settings.html">Payment settings</a></li>
+                                <li class="nav-link"><a href="./pos-account-settings.html">Account settings</a></li>
+                                <li class="nav-link"><a href="./pos-coins-settings.html">Coins settings</a></li>
+                            </ul></li>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                        <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                    </ul>
+                    <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+                </div>
+            </div>
+
+            <!-- donations -->
+            <div class="tab-pane" id="donations" >
+                <div class="donation-content">
+                    <div class="title">
+                        <h2>Donations</h2>
+                    </div>
+                    <div class="table-head donation-history mb-5">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Payment ID</th>
+                                    <th>Status</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Name</th>
+                                    <th>Social Link</th>
+                                    <th>Address</th>
+                                    <th>Created at<br>
+                                        Last update at</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4426946866</td>
+                                    <td>expired</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>04 Feb 2023, 10:56 am<br>
+                                        04 Feb 2023, 10:56 am</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="title">
+                        <h3 class="m-0">Donation Link</h3>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="donation-box">
+                        <p>Create your own donation link here</p>
+                        <div class="select-donation-link">
+                            <select>
+                                <option value="30MGSS7-315MRBF-PH3DGF4-9NWQR60">30MGSS7-315MRBF-PH3DGF4-9NWQR60</option>
+                            </select>
+                        </div>
+                        <div class="copy-link mb-4">
+                            <span>nowpayments.io/donation/</span>
+                            <input type="text" placeholder="example" value="">
+                            <span class="iconify copy-text" data-icon="material-symbols:content-copy"></span>
+                        </div>
+                        <div class="field-show-requred">
+                            <form>
+                                <div class="field-row">
+                                    <span>field</span>
+                                    <span>Show</span>
+                                    <span>Require</span>
+                                </div>
+                                <div class="field-row">
+                                    <span>Email</span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="field-row">
+                                    <span>Phone</span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="field-row">
+                                    <span>Name</span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="field-row">
+                                    <span>Social Link</span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="field-row">
+                                    <span>Address</span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <div class="form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch">
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="payment-btn">
+                                    <a href="#">Save</a>
+                                    <a href="./worktest.html">div.link</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="donation-box">
+                        <div class="title">
+                            <h3>Choose the donation button style</h3>
+                        </div>
+                        <div class="cont-btn donation-btn-style">
+                            <a href="#" type="button" onclick="light(0)">Black</a>
+                            <a href="#" type="button" onclick="light(1)">White</a>
+                        </div>
+                        <img class="donation-img" id="myImage" src="./img/donation-button-white.svg" width="230px" height="70px">
+                        <div class="title">
+                            <h3>Choose your api key</h3>
+                        </div>
+                        <div class="select-donation-link">
+                            <select>
+                                <option value="30MGSS7-315MRBF-PH3DGF4-9NWQR60">30MGSS7-315MRBF-PH3DGF4-9NWQR60</option>
+                            </select>
+                        </div>
+                        <div class="copy-link">
+                            <div class="pre-text">
+                                <code class="styles_code__2Ay9i"><span>&lt;<span class="styles_tagName__2YuPf">a</span> <span>href</span>=<span class="styles_tagString__3hTmT">"https://nowpayments.io/donation?api_key=30MGSS7-315MRBF-PH3DGF4-9NWQR60"</span> <span>target</span>=<span class="styles_tagString__3hTmT">"_blank"</span>&gt;</span><br>&nbsp;<span>&lt;<span class="styles_tagName__2YuPf">img</span> <span>src</span>=<span class="styles_tagString__3hTmT">"https://nowpayments.io/images/embeds/donation-button-black.svg"</span> <span>alt</span>=<span class="styles_tagString__3hTmT">"Crypto donation button by NOWPayments"</span>&gt;</span><br><span>&lt;/<span class="styles_tagName__2YuPf">a</span>&gt;</span></code>
+                            </div>
+                            <div class="cont-btn">
+                                <a href="#">Copy to clipboard</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="donation-box">
+                        <div class="title">
+                            <h3>Place a donation widget to your web page</h3>
+                        </div>
+                        <div class="select-donation-link">
+                            <select>
+                                <option value="30MGSS7-315MRBF-PH3DGF4-9NWQR60">30MGSS7-315MRBF-PH3DGF4-9NWQR60</option>
+                            </select>
+                        </div>
+                        <div class="copy-link">
+                            <div class="pre-text">
+                                <code class="styles_code__2Ay9i"><span>&lt;<span class="styles_tagName__2YuPf">iframe</span>&nbsp;<span>href</span>=<span class="styles_tagString__3hTmT">"https://nowpayments.io/embeds/donation-widget?api_key=30MGSS7-315MRBF-PH3DGF4-9NWQR60"</span>&nbsp;<span>frameborder</span>=<span class="styles_tagString__3hTmT">"0"</span>&nbsp;<span>scrolling</span>=<span class="styles_tagString__3hTmT">"no"</span>&nbsp;<span>style</span>=<span class="styles_tagString__3hTmT">"overflow-y: hidden;"</span>&nbsp;<span>width</span>=<span class="styles_tagString__3hTmT">"354"</span>&nbsp;<span>height</span>=<span class="styles_tagString__3hTmT">"680"</span>&gt;</span><span>&lt;/<span class="styles_tagName__2YuPf">iframe</span>&gt;</span></code>
+                            </div>
+                            <div class="cont-btn">
+                                <a href="#">Copy to clipboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <!--  jquary cdn  -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <!-- iconify -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- my js -->
+        <script src="./js/script.js"></script>
+    
+    </body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ducument</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!-- TAB BUTTON -->
+        <div class="d-flex align-items-start">
+            <div class="aside-menu-bar">
+                <div class="navigation-bar"> 
+                    <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                    <div class="nav flex-column nav-pills">
+                        <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                        <li class="nav-link"><a href="./pos-payments.html" class="active"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                        <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-link.html">Payment Link</a></li>
+                                <li class="nav-link"><a href="./pos-donations.html">Donations</a></li>
+                                <li class="nav-link"><a href="./pos-subscriptions.html">Subscriptions</a></li>
+                                <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                        <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                        <li class="nav-link"><a href="./pos-fiat-withdrawals.html"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                        <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                        <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-settings.html">Payment settings</a></li>
+                                <li class="nav-link"><a href="./pos-account-settings.html">Account settings</a></li>
+                                <li class="nav-link"><a href="./pos-coins-settings.html">Coins settings</a></li>
+                            </ul></li>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                        <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                    </ul>
+                    <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+                </div>
+            </div>
+
+            <!-- payments -->
+            <div class="tab-pane" id="payments" >
+                <div class="payment-method">
+                    <div class="title">
+                        <h2>Payments</h2>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="payment-btn open-filter1">
+                        <a href="#">Open filter</a>
+                    </div>
+                    <div class="payment-box filter-box hide-btn filterbox1">
+                        <form>
+                            <div class="filter-box-input">
+                                <div class="payment-id">
+                                    <label for="pay-id">Payment ID</label>
+                                    <input type="text" id="pay-id">
+                                </div>
+                                <div class="payin-address">
+                                    <label for="address">Payin Address</label>
+                                    <input type="text" id="address">
+                                </div>
+                                <div class="status">
+                                    <label for="status">Status</label>
+                                    <select type="text" placeholder="Select"><option value=""></option>
+                                        <option value="Waiting">Waiting</option>
+                                        <option value="Confirming">Confirming</option>
+                                        <option value="Confirmed">Confirmed</option>
+                                        <option value="Sending">Sending</option>
+                                        <option value="Partially_paid">Partially_paid</option>
+                                        <option value="Finished">Finished</option>
+                                        <option value="Failed">Failed</option>
+                                        <option value="Refunded">Refunded</option>
+                                        <option value="Expired">Expired</option>
+                                    </select>
+                                </div>
+                                <div class="order-id">
+                                    <label for="order-id">Order ID</label>
+                                    <input type="text" id="order-id">
+                                </div>
+                                <div class="original-price">
+                                    <label for="original-price">Original Price</label>
+                                    <select type="text" placeholder="Select"><option value=""></option>
+                                        <option value="ILS">ILS</option>
+                                        <option value="AUD">AUD</option>
+                                        <option value="GBP">GBP</option>
+                                        <option value="CAD">CAD</option>
+                                        <option value="MYR">MYR</option>
+                                        <option value="CHF">CHF</option>
+                                        <option value="CNY">CNY</option>
+                                        <option value="INR">INR</option>
+                                        <option value="JPY">JPY</option>
+                                        <option value="NOK">NOK</option>
+                                        <option value="RUB">RUB</option>
+                                        <option value="SGD">SGD</option>
+                                        <option value="THB">THB</option>
+                                        <option value="ZAR">ZAR</option>
+                                        <option value="TRY">TRY</option>
+                                        <option value="NGN">NGN</option>
+                                        <option value="SEK">SEK</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="NZD">NZD</option>
+                                        <option value="BRL">BRL</option>
+                                    </select>
+                                </div>
+                                <div class="fixed-rate">
+                                    <label for="fixed-rate">Fixed rate</label>
+                                    <select type="text" placeholder="Select"><option value=""></option>
+                                        <option value="True">True</option>
+                                        <option value="False">False</option>
+                                    </select>
+                                </div>
+                                <div class="payin-hash">
+                                    <label for="payin-hash">Payin Hash</label>
+                                    <input type="text" id="payin-hash">
+                                </div>
+                                <div class="outcome-price">
+                                    <label for="outcome-price">Outcome Price</label>
+                                    <select type="text" placeholder="Select"><option value=""></option>
+                                        <option value="BTC">BTC</option>
+                                        <option value="ETH">ETH</option>
+                                        <option value="LTC">LTC</option>
+                                        <option value="BCH">BCH</option>
+                                        <option value="XVG">XVG</option>
+                                        <option value="ZEC">ZEC</option>
+                                        <option value="TRX">TRX</option>
+                                        <option value="DGB">DGB</option>
+                                        <option value="ZEN">ZEN</option>
+                                        <option value="USDTTRC20">USDTTRC20</option>
+                                        <option value="DAI">DAI</option>
+                                        <option value="RVN">RVN</option>
+                                        <option value="LINK">LINK</option>
+                                        <option value="GT">GT</option>
+                                        <option value="UNI">UNI</option>
+                                        <option value="TUSD">TUSD</option>
+                                        <option value="SXPMAINNET">SXPMAINNET</option>
+                                        <option value="STPT">STPT</option>
+                                        <option value="EGLD">EGLD</option>
+                                        <option value="SHIB">SHIB</option>
+                                        <option value="XTZ">XTZ</option>
+                                        <option value="FIL">FIL</option>
+                                        <option value="TON">TON</option>
+                                        <option value="DOGE">DOGE</option>
+                                        <option value="ARK">ARK</option>
+                                        <option value="FRONT">FRONT</option>
+                                        <option value="HBAR">HBAR</option>
+                                        <option value="FTM">FTM</option>
+                                        <option value="EOS">EOS</option>
+                                        <option value="FUN">FUN</option>
+                                        <option value="VET">VET</option>
+                                        <option value="FTMMAINNET">FTMMAINNET</option>
+                                        <option value="MANA">MANA</option>
+                                        <option value="DGD">DGD</option>
+                                        <option value="GAS">GAS</option>
+                                        <option value="MCO">MCO</option>
+                                        <option value="COTI">COTI</option>
+                                        <option value="DOT">DOT</option>
+                                        <option value="LGCY">LGCY</option>
+                                        <option value="GRS">GRS</option>
+                                        <option value="AVA">AVA</option>
+                                        <option value="REP">REP</option>
+                                        <option value="ALGO">ALGO</option>
+                                        <option value="LSK">LSK</option>
+                                        <option value="ONT">ONT</option>
+                                        <option value="OCEAN">OCEAN</option>
+                                        <option value="CRO">CRO</option>
+                                        <option value="NPXS">NPXS</option>
+                                        <option value="OKB">OKB</option>
+                                        <option value="YFI">YFI</option>
+                                        <option value="AE">AE</option>
+                                        <option value="DAO">DAO</option>
+                                        <option value="BNBMAINNET">BNBMAINNET</option>
+                                        <option value="BTG">BTG</option>
+                                        <option value="XLM">XLM</option>
+                                        <option value="DASH">DASH</option>
+                                        <option value="WAVES">WAVES</option>
+                                        <option value="ZIL">ZIL</option>
+                                        <option value="ADA">ADA</option>
+                                        <option value="XRP">XRP</option>
+                                        <option value="XMR">XMR</option>
+                                        <option value="NEO">NEO</option>
+                                        <option value="FIRO">FIRO</option>
+                                        <option value="XZC">XZC</option>
+                                        <option value="PAX">PAX</option>
+                                        <option value="DCR">DCR</option>
+                                        <option value="BCD">BCD</option>
+                                        <option value="WABI">WABI</option>
+                                        <option value="USDTERC20">USDTERC20</option>
+                                        <option value="QTUM">QTUM</option>
+                                        <option value="HT">HT</option>
+                                        <option value="BAT">BAT</option>
+                                        <option value="KMD">KMD</option>
+                                        <option value="BEAM">BEAM</option>
+                                        <option value="NANO">NANO</option>
+                                        <option value="ETC">ETC</option>
+                                        <option value="SAND">SAND</option>
+                                        <option value="BUSD">BUSD</option>
+                                        <option value="MATIC">MATIC</option>
+                                        <option value="STRAX">STRAX</option>
+                                        <option value="SOL">SOL</option>
+                                        <option value="ONE">ONE</option>
+                                        <option value="ICX">ICX</option>
+                                        <option value="XEM">XEM</option>
+                                        <option value="CTSI">CTSI</option>
+                                        <option value="BUSDBSC">BUSDBSC</option>
+                                        <option value="USDC">USDC</option>
+                                        <option value="USDT">USDT</option>
+                                        <option value="XCUR">XCUR</option>
+                                        <option value="NOW">NOW</option>
+                                        <option value="VIB">VIB</option>
+                                        <option value="OM">OM</option>
+                                        <option value="SUPER">SUPER</option>
+                                        <option value="KLV">KLV</option>
+                                        <option value="HOGE">HOGE</option>
+                                        <option value="SRK">SRK</option>
+                                        <option value="GUSD">GUSD</option>
+                                        <option value="BNBBSC">BNBBSC</option>
+                                        <option value="XYM">XYM</option>
+                                        <option value="CHR">CHR</option>
+                                        <option value="LUNC">LUNC</option>
+                                        <option value="FTT">FTT</option>
+                                        <option value="NWC">NWC</option>
+                                        <option value="KISHU">KISHU</option>
+                                        <option value="AVAX">AVAX</option>
+                                        <option value="CAKE">CAKE</option>
+                                        <option value="KEANU">KEANU</option>
+                                        <option value="IOTX">IOTX</option>
+                                        <option value="THETA">THETA</option>
+                                        <option value="IOTA">IOTA</option>
+                                        <option value="HOT">HOT</option>
+                                        <option value="UST">UST</option>
+                                        <option value="MX">MX</option>
+                                        <option value="TFUEL">TFUEL</option>
+                                        <option value="LUNA">LUNA</option>
+                                        <option value="USDP">USDP</option>
+                                        <option value="FEG">FEG</option>
+                                        <option value="KNC">KNC</option>
+                                        <option value="AXS">AXS</option>
+                                        <option value="C98">C98</option>
+                                        <option value="CHZ">CHZ</option>
+                                        <option value="AAVE">AAVE</option>
+                                        <option value="CVC">CVC</option>
+                                        <option value="ENJ">ENJ</option>
+                                        <option value="GRT">GRT</option>
+                                        <option value="LEASH">LEASH</option>
+                                        <option value="FLOKI">FLOKI</option>
+                                        <option value="TKO">TKO</option>
+                                        <option value="OMG">OMG</option>
+                                        <option value="CNS">CNS</option>
+                                        <option value="GSPI">GSPI</option>
+                                        <option value="ATOM">ATOM</option>
+                                        <option value="SPI">SPI</option>
+                                        <option value="USDTBSC">USDTBSC</option>
+                                        <option value="TRVL">TRVL</option>
+                                        <option value="RXCG">RXCG</option>
+                                        <option value="BABYDOGE">BABYDOGE</option>
+                                        <option value="AVAERC20">AVAERC20</option>
+                                        <option value="XYO">XYO</option>
+                                        <option value="POODL">POODL</option>
+                                        <option value="BEL">BEL</option>
+                                        <option value="ARPA">ARPA</option>
+                                        <option value="AVABSC">AVABSC</option>
+                                        <option value="NEAR">NEAR</option>
+                                        <option value="FLUF">FLUF</option>
+                                        <option value="NTVRK">NTVRK</option>
+                                        <option value="SFUND">SFUND</option>
+                                        <option value="RACA">RACA</option>
+                                        <option value="KLAY">KLAY</option>
+                                        <option value="GALAERC20">GALAERC20</option>
+                                        <option value="KIBABSC">KIBABSC</option>
+                                        <option value="XDC">XDC</option>
+                                        <option value="MATICMAINNET">MATICMAINNET</option>
+                                        <option value="BRISE">BRISE</option>
+                                        <option value="PIT">PIT</option>
+                                        <option value="POOLZ">POOLZ</option>
+                                        <option value="RBIF">RBIF</option>
+                                        <option value="NFTB">NFTB</option>
+                                        <option value="AVAXC">AVAXC</option>
+                                        <option value="BLOCKS">BLOCKS</option>
+                                        <option value="SHIBBSC">SHIBBSC</option>
+                                        <option value="CUDOS">CUDOS</option>
+                                        <option value="AVN">AVN</option>
+                                        <option value="BIFI">BIFI</option>
+                                        <option value="MARSH">MARSH</option>
+                                        <option value="ARV">ARV</option>
+                                        <option value="KIBA">KIBA</option>
+                                        <option value="ILV">ILV</option>
+                                        <option value="1INCH">1INCH</option>
+                                        <option value="VOLT">VOLT</option>
+                                        <option value="CULT">CULT</option>
+                                        <option value="1INCHBSC">1INCHBSC</option>
+                                        <option value="TOMO">TOMO</option>
+                                        <option value="APE">APE</option>
+                                        <option value="GHC">GHC</option>
+                                        <option value="HOTCROSS">HOTCROSS</option>
+                                        <option value="ETHBSC">ETHBSC</option>
+                                        <option value="PIKA">PIKA</option>
+                                        <option value="XCAD">XCAD</option>
+                                        <option value="GAFA">GAFA</option>
+                                        <option value="BTFA">BTFA</option>
+                                        <option value="BTTCBSC">BTTCBSC</option>
+                                        <option value="TENSHI">TENSHI</option>
+                                        <option value="BTTC">BTTC</option>
+                                        <option value="GAL">GAL</option>
+                                        <option value="USDCMATIC">USDCMATIC</option>
+                                        <option value="DGMOON">DGMOON</option>
+                                        <option value="USDDTRC20">USDDTRC20</option>
+                                        <option value="DOGECOIN">DOGECOIN</option>
+                                        <option value="GGTKN">GGTKN</option>
+                                        <option value="FLOKIBSC">FLOKIBSC</option>
+                                        <option value="GUARD">GUARD</option>
+                                        <option value="ETHW">ETHW</option>
+                                        <option value="USDTSOL">USDTSOL</option>
+                                        <option value="QUACK">QUACK</option>
+                                        <option value="TTC">TTC</option>
+                                        <option value="BONE">BONE</option>
+                                        <option value="DIVI">DIVI</option>
+                                        <option value="ZBC">ZBC</option>
+                                        <option value="CUSD">CUSD</option>
+                                        <option value="FITFI">FITFI</option>
+                                        <option value="BRGBSC">BRGBSC</option>
+                                        <option value="JASMY">JASMY</option>
+                                        <option value="TUSDTRC20">TUSDTRC20</option>
+                                        <option value="ONIGI">ONIGI</option>
+                                        <option value="BSV">BSV</option>
+                                    </select>
+                                </div>
+                                <div class="free-users">
+                                    <label for="users">Fee paid by userz</label>
+                                    <select type="text" placeholder="Select"><option value=""></option>
+                                        <option value="True">True</option>
+                                        <option value="False">False</option>
+                                    </select>
+                                </div>
+                            </div> 
+                            <div class="filter-btn">
+                                <div class="payment-btn close-filter1">
+                                    <a href="#">Close filter</a>
+                                </div>
+                                <div class="payment-date-box">
+                                    <div class="from-date">
+                                        <label for="from-date">from</label>
+                                        <input type="date" id="from-date">
+                                    </div>
+                                    <div class="from-date">
+                                        <label for="to-date">To</label>
+                                        <input type="date" id="to-date">
+                                    </div>
+                                </div>
+                                <div class="payment-btn">
+                                    <a type="submit" href="#">Apply</a>
+                                </div>
+                            </div>                        
+                        </form>
+                    </div>
+                    <table class="table-row">
+                        <thead>
+                            <tr>
+                                <th>Payment ID</th>
+                                <th>Order ID</th>
+                                <th>Original Price</th>
+                                <th>Amount Sent</th>
+                                <th>Amount Received</th>
+                                <th>Status</th>
+                                <th>Created at</th>
+                                <th>Last update at</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5249815411</td>
+                                <td>test123123</td>
+                                <td>100 USD</td>
+                                <td>99.77 USDTTRC20</td>
+                                <td>0.00426706 BTC</td>
+                                <td>expired</td>
+                                <td>06 Feb 2023, 09:43 am</td>
+                                <td>06 Feb 2023, 10:03 am</td>
+                                <td><a href="#"  data-bs-toggle="modal" data-bs-target="#payment-slip-modal"><span class="iconify" data-icon="system-uicons:clipboard-notes"></span></a></td>
+                            </tr>
+                            <tr>
+                                <td>5249815411</td>
+                                <td>test123123</td>
+                                <td>100 USD</td>
+                                <td>99.77 USDTTRC20</td>
+                                <td>0.00426706 BTC</td>
+                                <td>waiting</td>
+                                <td>06 Feb 2023, 09:43 am</td>
+                                <td>06 Feb 2023, 10:03 am</td>
+                                <td><a href="#"  data-bs-toggle="modal" data-bs-target="#payment-slip-modal"><span class="iconify" data-icon="system-uicons:clipboard-notes"></span></a></td>
+                            </tr>
+                            <tr>
+                                <td>5249815411</td>
+                                <td>test123123</td>
+                                <td>100 USD</td>
+                                <td>99.77 USDTTRC20</td>
+                                <td>0.00426706 BTC</td>
+                                <td>expired</td>
+                                <td>06 Feb 2023, 09:43 am</td>
+                                <td>06 Feb 2023, 10:03 am</td>
+                                <td><a href="#"  data-bs-toggle="modal" data-bs-target="#payment-slip-modal"><span class="iconify" data-icon="system-uicons:clipboard-notes"></span></a></td>
+                            </tr>
+                            <tr>
+                                <td>5249815411</td>
+                                <td>test123123</td>
+                                <td>100 USD</td>
+                                <td>99.77 USDTTRC20</td>
+                                <td>0.00426706 BTC</td>
+                                <td>expired</td>
+                                <td>06 Feb 2023, 09:43 am</td>
+                                <td>06 Feb 2023, 10:03 am</td>
+                                <td><a href="#"  data-bs-toggle="modal" data-bs-target="#payment-slip-modal"><span class="iconify" data-icon="system-uicons:clipboard-notes"></span></a></td>
+                            </tr>
+                            <tr>
+                                <td>5249815411</td>
+                                <td>test123123</td>
+                                <td>100 USD</td>
+                                <td>99.77 USDTTRC20</td>
+                                <td>0.00426706 BTC</td>
+                                <td>expired</td>
+                                <td>06 Feb 2023, 09:43 am</td>
+                                <td>06 Feb 2023, 10:03 am</td>
+                                <td><a href="#"  data-bs-toggle="modal" data-bs-target="#payment-slip-modal"><span class="iconify" data-icon="system-uicons:clipboard-notes"></span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Modal -->
+                    <div class="modal fade payment-history" id="payment-slip-modal" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content modal-box">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            
+                            <div class="payment-dialog-box">
+                                <div class="payment-detail-id">
+                                <div class="id-title">Payment:</div> 
+                                <div class="id-title">6350220188</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Original price:</div>
+                                    <div class="detail-id-value">10 USD</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Pay price:</div>
+                                    <div class="detail-id-value">0.00611681 ETH</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Actually paid:</div>
+                                    <div class="detail-id-value">0 ETH</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Outcome Price:</div>
+                                    <div class="detail-id-value">N/A</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Type:</div>
+                                    <div class="detail-id-value">crypto2crypto</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Status</div>
+                                    <div class="detail-id-value style-id-expired-color">expired</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Created at:</div>
+                                    <div class="detail-id-value">07 Feb 2023, 10:24 am</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Updated at:</div>
+                                    <div class="detail-id-value">08 Feb 2023, 10:24 am</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Payin address:</div>
+                                    <div class="detail-id-value">0x09A28fB7Df93fc1E2B318598b5f3114C905654aB</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Payout address:</div>
+                                    <div class="detail-id-value">changenow_partner_35bb077b0e</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Fixed rate:</div>
+                                    <div class="detail-id-value">False</div>
+                                </div>
+                                <div class="style-id-detail">
+                                    <div class="caption-id-detail">Fee paid by user:</div>
+                                    <div class="detail-id-value">False</div>
+                                </div>
+                            </div>
+                            <div class="payment-btn d-flex justify-content-between">
+                                <a href="#" class="style-click-btn">Send IPN notification</a>
+                                <a href="#" class="style-click-btn" data-bs-dismiss="modal">OK</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="purchase-method">
+                    <div class="title">
+                        <h2>Purchase</h2>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="payment-btn open-filter2">
+                        <a href="#">Open filter</a>
+                    </div>
+                    <div class="payment-box filter-box hide-btn filterbox2">
+                        <form>
+                            <div class="filter-box-input">
+                                <div class="payment-id">
+                                    <label for="pay-id">Payment ID</label>
+                                    <input type="text" id="pay-id">
+                                </div>
+                                <div class="status">
+                                    <label for="status">Status</label>
+                                    <select type="text" placeholder="Select"><option value=""></option>
+                                        <option value="Waiting">Waiting</option>
+                                        <option value="Confirming">Confirming</option>
+                                        <option value="Confirmed">Confirmed</option>
+                                        <option value="Sending">Sending</option>
+                                        <option value="Partially_paid">Partially_paid</option>
+                                        <option value="Finished">Finished</option>
+                                        <option value="Failed">Failed</option>
+                                        <option value="Refunded">Refunded</option>
+                                        <option value="Expired">Expired</option>
+                                    </select>
+                                </div>
+                            </div> 
+                            <div class="filter-btn">
+                                <div class="payment-btn close-filter2">
+                                    <a href="#">Close filter</a>
+                                </div>
+                                <div class="payment-date-box">
+                                    <div class="from-date">
+                                        <label for="from-date">from</label>
+                                        <input type="date" id="from-date">
+                                    </div>
+                                    <div class="from-date">
+                                        <label for="to-date">To</label>
+                                        <input type="date" id="to-date">
+                                    </div>
+                                </div>
+                                <div class="payment-btn">
+                                    <a type="submit" href="#">Apply</a>
+                                </div>
+                            </div>                        
+                        </form>
+                    </div>
+                    <table class="table-row">
+                        <tbody>
+                            <tr>
+                                <th>Purchase ID</th>
+                                <th>Status</th>
+                                <th>Payments Count</th>
+                                <th>Created at</th>
+                                <th>Last update at</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>You don’t have any complete purchases yet.</p>
+                </div>
+            </div>
+            
+        </div>
+     
+        <!--  jquary cdn  -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <!-- iconify -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- my js -->
+        <script src="./js/script.js"></script>
+    
+    </body>
+</html>

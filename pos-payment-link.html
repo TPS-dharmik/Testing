@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ducument</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!-- TAB BUTTON -->
+        <div class="d-flex align-items-start">
+            <div class="aside-menu-bar">
+                <div class="navigation-bar"> 
+                    <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                    <div class="nav flex-column nav-pills">
+                        <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                        <li class="nav-link"><a href="./pos-payments.html"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                        <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-link.html" class="active">Payment Link</a></li>
+                                <li class="nav-link"><a href="./pos-donations.html">Donations</a></li>
+                                <li class="nav-link"><a href="./pos-subscriptions.html">Subscriptions</a></li>
+                                <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                        <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                        <li class="nav-link"><a href="./pos-fiat-withdrawals.html"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                        <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                        <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-settings.html">Payment settings</a></li>
+                                <li class="nav-link"><a href="./pos-account-settings.html">Account settings</a></li>
+                                <li class="nav-link"><a href="./pos-coins-settings.html">Coins settings</a></li>
+                            </ul></li>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                        <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                    </ul>
+                    <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+                </div>
+            </div>
+
+             <!-- payment-link -->
+             <div class="tab-pane" id="payment-link" >
+                <div class="payment-link-content">
+                    <div class="title">
+                        <h2>Payment Link</h2>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="cont-btn" data-bs-toggle="modal" data-bs-target="#payment_link_modal">
+                        <a href="#">Create payment link</a>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="payment_link_modal" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content modal-box">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="title payment-link-modal">
+                                            <h3 class="modal-title">Create payment link</h3>
+                                        </div>
+                                        <div class="pay-currency">
+                                            <label for="pay-currency">Pay currency</label>
+                                            <div class="mm-dropdown withdrawals-login">
+                                                <div class="textfirst" id="textfirst"><div class="d-flex flex-column w-100 ">All currencies <span>Client can choose any supported crypto for payment</span></div><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png" width="10" height="10" class="down" /></div>
+                                                <ul class="coin-list" id="coin-list" style="display: none;">
+                                                    <li class="list-type"  style="display: none;">Popular</li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/btc.svg" alt="Bitcoin" decoding="async">
+                                                        <div>
+                                                            <div>BTC<span>btc</span></div>
+                                                            <div>Bitcoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/eth.svg" alt="Ethereum" decoding="async">
+                                                        <div>
+                                                            <div>ETH<span>eth</span></div>
+                                                            <div>Ethereum</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/usdttrc20.svg" alt="Tether-Tron" decoding="async">
+                                                        <div>
+                                                            <div>USDTTRC20<span>trx</span></div>
+                                                            <div>Tether-Tron</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bnbbsc.svg" alt="BNBBSC" decoding="async">
+                                                        <div>
+                                                            <div>BNBBSC<span>bsc</span></div>
+                                                            <div>BNBBSC</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xrp.svg" alt="Ripple" decoding="async">
+                                                        <div>
+                                                            <div>XRP<span>xrp</span></div>
+                                                            <div>Ripple</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ada.svg" alt="Cardano" decoding="async">
+                                                        <div>
+                                                            <div>ADA<span>ada</span></div>
+                                                            <div>Cardano</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/sol.svg" alt="SOL" decoding="async">
+                                                        <div>
+                                                            <div>SOL<span>sol</span></div>
+                                                            <div>SOL</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/MATICMAINNET.svg" alt="MATICMAINNET" decoding="async">
+                                                        <div>
+                                                            <div>MATICMAINNET<span>matic</span></div>
+                                                            <div>MATICMAINNET</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/trx.svg" alt="Tron" decoding="async">
+                                                        <div>
+                                                            <div>TRX<span>trx</span></div>
+                                                            <div>Tron</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/avaxc.svg" alt="Avalanche (C-Chain)" decoding="async">
+                                                        <div>
+                                                            <div>AVAXC<span>cchain</span></div>
+                                                            <div>Avalanche (C-Chain)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xmr.svg" alt="Monero" decoding="async">
+                                                        <div>
+                                                            <div>XMR<span>xmr</span></div>
+                                                            <div>Monero</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dgb.svg" alt="DigiByte" decoding="async">
+                                                        <div>
+                                                            <div>DGB<span>dgb</span></div>
+                                                            <div>DigiByte</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-type"  style="display: none;">Stablecoins</li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/usdttrc20.svg" alt="Tether-Tron" decoding="async">
+                                                        <div>
+                                                            <div>USDTTRC20<span>trx</span></div>
+                                                            <div>Tether-Tron</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/busdbsc.svg" alt="BUSDBSC" decoding="async">
+                                                        <div>
+                                                            <div>BUSDBSC<span>bsc</span></div>
+                                                            <div>BUSDBSC</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/pax.svg" alt="Paxos" decoding="async">
+                                                        <div>
+                                                            <div>PAX<span>eth</span></div>
+                                                            <div>Paxos</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/tusd.svg" alt="TrueUSD" decoding="async">
+                                                        <div>
+                                                            <div>TUSD<span>eth</span></div>
+                                                            <div>TrueUSD</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-type"   style="display: none;">All currencies</li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/btc.svg" alt="Bitcoin" decoding="async">
+                                                        <div>
+                                                            <div>BTC<span>btc</span></div>
+                                                            <div>Bitcoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ltc.svg" alt="Litecoin" decoding="async">
+                                                        <div>
+                                                            <div>LTC<span>ltc</span></div>
+                                                            <div>Litecoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/eth.svg" alt="Ethereum" decoding="async">
+                                                        <div>
+                                                            <div>ETH<span>eth</span></div>
+                                                            <div>Ethereum</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/usdttrc20.svg" alt="Tether-Tron" decoding="async">
+                                                        <div>
+                                                            <div>USDTTRC20<span>trx</span></div>
+                                                            <div>Tether-Tron</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bch.svg" alt="Bitcoin Cash" decoding="async">
+                                                        <div>
+                                                            <div>BCH<span>bch</span></div>
+                                                            <div>Bitcoin Cash</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bnbbsc.svg" alt="BNBBSC" decoding="async">
+                                                        <div>
+                                                            <div>BNBBSC<span>bsc</span></div>
+                                                            <div>BNBBSC</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xvg.svg" alt="Verge" decoding="async">
+                                                        <div>
+                                                            <div>XVG<span>xvg</span></div>
+                                                            <div>Verge</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xrp.svg" alt="Ripple" decoding="async">
+                                                        <div>
+                                                            <div>XRP<span>xrp</span></div>
+                                                            <div>Ripple</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/zec.svg" alt="Zcash" decoding="async">
+                                                        <div>
+                                                            <div>ZEC<span>zec</span></div>
+                                                            <div>Zcash</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ada.svg" alt="Cardano" decoding="async">
+                                                        <div>
+                                                            <div>ADA<span>ada</span></div>
+                                                            <div>Cardano</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/sol.svg" alt="SOL" decoding="async">
+                                                        <div>
+                                                            <div>SOL<span>sol</span></div>
+                                                            <div>SOL</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/MATICMAINNET.svg" alt="MATICMAINNET" decoding="async">
+                                                        <div>
+                                                            <div>MATICMAINNET<span>matic</span></div>
+                                                            <div>MATICMAINNET</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/zen.svg" alt="Horizen" decoding="async">
+                                                        <div>
+                                                            <div>ZEN<span>zen</span></div>
+                                                            <div>Horizen</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/trx.svg" alt="Tron" decoding="async">
+                                                        <div>
+                                                            <div>TRX<span>trx</span></div>
+                                                            <div>Tron</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/avaxc.svg" alt="Avalanche (C-Chain)" decoding="async">
+                                                        <div>
+                                                            <div>AVAXC<span>cchain</span></div>
+                                                            <div>Avalanche (C-Chain)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ark.svg" alt="ARK" decoding="async">
+                                                        <div>
+                                                            <div>ARK<span>ark</span></div>
+                                                            <div>ARK</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/doge.svg" alt="DOGE" decoding="async">
+                                                        <div>
+                                                            <div>DOGE<span>doge</span></div>
+                                                            <div>DOGE</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ton.svg" alt="Toncoin" decoding="async">
+                                                        <div>
+                                                            <div>TON<span>ton</span></div>
+                                                            <div>Toncoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/fil.svg" alt="Filecoin" decoding="async">
+                                                        <div>
+                                                            <div>FIL<span>fil</span></div>
+                                                            <div>Filecoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xtz.svg" alt="Tezos" decoding="async">
+                                                        <div>
+                                                            <div>XTZ<span>xtz</span></div>
+                                                            <div>Tezos</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/shib.svg" alt="Shiba Inu" decoding="async">
+                                                        <div>
+                                                            <div>SHIB<span>eth</span></div>
+                                                            <div>Shiba Inu</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/egld.svg" alt="EGLD" decoding="async">
+                                                        <div>
+                                                            <div>EGLD<span>egld</span></div>
+                                                            <div>EGLD</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/stpt.svg" alt="STP Network" decoding="async">
+                                                        <div>
+                                                            <div>STPT<span>eth</span></div>
+                                                            <div>STP Network</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/uni.svg" alt="Uniswap" decoding="async">
+                                                        <div>
+                                                            <div>UNI<span>eth</span></div>
+                                                            <div>Uniswap</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/gt.svg" alt="Gatechain Token" decoding="async">
+                                                        <div>
+                                                            <div>GT<span>eth</span></div>
+                                                            <div>Gatechain Token</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/link.svg" alt="Chainlink" decoding="async">
+                                                        <div>
+                                                            <div>LINK<span>eth</span></div>
+                                                            <div>Chainlink</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/rvn.svg" alt="RVN" decoding="async">
+                                                        <div>
+                                                            <div>RVN<span>rvn</span></div>
+                                                            <div>RVN</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xmr.svg" alt="Monero" decoding="async">
+                                                        <div>
+                                                            <div>XMR<span>xmr</span></div>
+                                                            <div>Monero</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/eos.svg" alt="EOS" decoding="async">
+                                                        <div>
+                                                            <div>EOS<span>eos</span></div>
+                                                            <div>EOS</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ftm.svg" alt="FTM" decoding="async">
+                                                        <div>
+                                                            <div>FTM<span>eth</span></div>
+                                                            <div>FTM</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/hbar.svg" alt="HBAR" decoding="async">
+                                                        <div>
+                                                            <div>HBAR<span>hbar</span></div>
+                                                            <div>HBAR</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/front.svg" alt="FRONT" decoding="async">
+                                                        <div>
+                                                            <div>FRONT<span>eth</span></div>
+                                                            <div>FRONT</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/busdbsc.svg" alt="BUSDBSC" decoding="async">
+                                                        <div>
+                                                            <div>BUSDBSC<span>bsc</span></div>
+                                                            <div>BUSDBSC</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/mana.svg" alt="MANA" decoding="async">
+                                                        <div>
+                                                            <div>MANA<span>eth</span></div>
+                                                            <div>MANA</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ftm.svg" alt="FTMMAINNET" decoding="async">
+                                                        <div>
+                                                            <div>FTMMAINNET<span>ftm</span></div>
+                                                            <div>FTMMAINNET</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/vet.svg" alt="Vechain" decoding="async">
+                                                        <div>
+                                                            <div>VET<span>eth</span></div>
+                                                            <div>Vechain</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/fun.svg" alt="FunFair" decoding="async">
+                                                        <div>
+                                                            <div>FUN<span>eth</span></div>
+                                                            <div>FunFair</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dgd.svg" alt="DigixDAO" decoding="async">
+                                                        <div>
+                                                            <div>DGD<span>eth</span></div>
+                                                            <div>DigixDAO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/mco.svg" alt="MCO" decoding="async">
+                                                        <div>
+                                                            <div>MCO<span>eth</span></div>
+                                                            <div>MCO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/gas.svg" alt="NeoGas" decoding="async">
+                                                        <div>
+                                                            <div>GAS<span>neo</span></div>
+                                                            <div>NeoGas</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/pax.svg" alt="Paxos" decoding="async">
+                                                        <div>
+                                                            <div>PAX<span>eth</span></div>
+                                                            <div>Paxos</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dao.svg" alt="DAO" decoding="async">
+                                                        <div>
+                                                            <div>DAO<span>eth</span></div>
+                                                            <div>DAO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ae.svg" alt="AE" decoding="async">
+                                                        <div>
+                                                            <div>AE</div>
+                                                            <div>AE</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/yfi.svg" alt="YFI" decoding="async">
+                                                        <div>
+                                                            <div>YFI<span>eth</span></div>
+                                                            <div>YFI</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/okb.svg" alt="OKB" decoding="async">
+                                                        <div>
+                                                            <div>OKB<span>eth</span></div>
+                                                            <div>OKB</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/npxs.svg" alt="Pundi-x" decoding="async">
+                                                        <div>
+                                                            <div>NPXS<span>eth</span></div>
+                                                            <div>Pundi-x</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/cro.svg" alt="CRO" decoding="async">
+                                                        <div>
+                                                            <div>CRO<span>eth</span></div>
+                                                            <div>CRO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ocean.svg" alt="OCEAN" decoding="async">
+                                                        <div>
+                                                            <div>OCEAN<span>eth</span></div>
+                                                            <div>OCEAN</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ont.svg" alt="Ontology" decoding="async">
+                                                        <div>
+                                                            <div>ONT<span>ont</span></div>
+                                                            <div>Ontology</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/lsk.svg" alt="Lisk" decoding="async">
+                                                        <div>
+                                                            <div>LSK<span>lsk</span></div>
+                                                            <div>Lisk</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/algo.svg" alt="ALGO" decoding="async">
+                                                        <div>
+                                                            <div>ALGO<span>algo</span></div>
+                                                            <div>ALGO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/rep.svg" alt="Augur" decoding="async">
+                                                        <div>
+                                                            <div>REP<span>eth</span></div>
+                                                            <div>Augur</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ava.svg" alt="Travala.com" decoding="async">
+                                                        <div>
+                                                            <div>AVA<span>bnb</span></div>
+                                                            <div>Travala.com</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/grs.svg" alt="Groestlcoin" decoding="async">
+                                                        <div>
+                                                            <div>GRS<span>grs</span></div>
+                                                            <div>Groestlcoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/lgcy.svg" alt="LGCY" decoding="async">
+                                                        <div>
+                                                            <div>LGCY<span>eth</span></div>
+                                                            <div>LGCY</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dot.svg" alt="POLKADOT" decoding="async">
+                                                        <div>
+                                                            <div>DOT<span>dot</span></div>
+                                                            <div>POLKADOT</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/coti.svg" alt="COTI" decoding="async">
+                                                        <div>
+                                                            <div>COTI<span>eth</span></div>
+                                                            <div>COTI</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/btg.svg" alt="Bitcoin Gold" decoding="async">
+                                                        <div>
+                                                            <div>BTG<span>btg</span></div>
+                                                            <div>Bitcoin Gold</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bnbmainnet.svg" alt="BNBMAINNET" decoding="async">
+                                                        <div>
+                                                            <div>BNBMAINNET<span>bnb</span></div>
+                                                            <div>BNBMAINNET</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/tusd.svg" alt="TrueUSD" decoding="async">
+                                                        <div>
+                                                            <div>TUSD<span>eth</span></div>
+                                                            <div>TrueUSD</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xlm.svg" alt="Stellar Lumens" decoding="async">
+                                                        <div>
+                                                            <div>XLM<span>xlm</span></div>
+                                                            <div>Stellar Lumens</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dash.svg" alt="Dash" decoding="async">
+                                                        <div>
+                                                            <div>DASH<span>dash</span></div>
+                                                            <div>Dash</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/zil.svg" alt="Zilliqa" decoding="async">
+                                                        <div>
+                                                            <div>ZIL<span>zil</span></div>
+                                                            <div>Zilliqa</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/waves.svg" alt="Waves" decoding="async">
+                                                        <div>
+                                                            <div>WAVES<span>waves</span></div>
+                                                            <div>Waves</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dgb.svg" alt="DigiByte" decoding="async">
+                                                        <div>
+                                                            <div>DGB<span>dgb</span></div>
+                                                            <div>DigiByte</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/neo.svg" alt="NEO" decoding="async">
+                                                        <div>
+                                                            <div>NEO<span>neo</span></div>
+                                                            <div>NEO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xzc.svg" alt="Zcoin" decoding="async">
+                                                        <div>
+                                                            <div>XZC</div>
+                                                            <div>Zcoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/firo.svg" alt="FIRO" decoding="async">
+                                                        <div>
+                                                            <div>FIRO<span>firo</span></div>
+                                                            <div>FIRO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bcd.svg" alt="Bitcoin Diamond" decoding="async">
+                                                        <div>
+                                                            <div>BCD<span>bcd</span></div>
+                                                            <div>Bitcoin Diamond</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dcr.svg" alt="Decred" decoding="async">
+                                                        <div>
+                                                            <div>DCR<span>dcr</span></div>
+                                                            <div>Decred</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/wabi.svg" alt="Tael" decoding="async">
+                                                        <div>
+                                                            <div>WABI<span>eth</span></div>
+                                                            <div>Tael</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/qtum.svg" alt="Qtum" decoding="async">
+                                                        <div>
+                                                            <div>QTUM<span>qtum</span></div>
+                                                            <div>Qtum</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ht.svg" alt="Huobi Token" decoding="async">
+                                                        <div>
+                                                            <div>HT<span>eth</span></div>
+                                                            <div>Huobi Token</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bat.svg" alt="Basic Attention Token" decoding="async">
+                                                        <div>
+                                                            <div>BAT<span>eth</span></div>
+                                                            <div>Basic Attention Token</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/kmd.svg" alt="Komodo" decoding="async">
+                                                        <div>
+                                                            <div>KMD<span>kmd</span></div>
+                                                            <div>Komodo</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/beam.svg" alt="Beam" decoding="async">
+                                                        <div>
+                                                            <div>BEAM<span>beam</span></div>
+                                                            <div>Beam</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/nano.svg" alt="Nano" decoding="async">
+                                                        <div>
+                                                            <div>NANO<span>nano</span></div>
+                                                            <div>Nano</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/etc.svg" alt="Ethereum Classic" decoding="async">
+                                                        <div>
+                                                            <div>ETC<span>etc</span></div>
+                                                            <div>Ethereum Classic</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ctsi.svg" alt="CTSI" decoding="async">
+                                                        <div>
+                                                            <div>CTSI<span>eth</span></div>
+                                                            <div>CTSI</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xem.svg" alt="NEM" decoding="async">
+                                                        <div>
+                                                            <div>XEM<span>xem</span></div>
+                                                            <div>NEM</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/icx.svg" alt="ICON" decoding="async">
+                                                        <div>
+                                                            <div>ICX<span>icx</span></div>
+                                                            <div>ICON</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/one.svg" alt="ONE" decoding="async">
+                                                        <div>
+                                                            <div>ONE<span>one</span></div>
+                                                            <div>ONE</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/strax.svg" alt="STRAX" decoding="async">
+                                                        <div>
+                                                            <div>STRAX<span>strax</span></div>
+                                                            <div>STRAX</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/MATICMAINNET.svg" alt="MATIC" decoding="async">
+                                                        <div>
+                                                            <div>MATIC<span>eth</span></div>
+                                                            <div>MATIC</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/busd.svg" alt="BUSD" decoding="async">
+                                                        <div>
+                                                            <div>BUSD<span>eth</span></div>
+                                                            <div>BUSD</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/sand.svg" alt="SAND" decoding="async">
+                                                        <div>
+                                                            <div>SAND<span>eth</span></div>
+                                                            <div>SAND</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/now.svg" alt="ChangeNOW" decoding="async">
+                                                        <div>
+                                                            <div>NOW<span>eth</span></div>
+                                                            <div>ChangeNOW</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xcur.svg" alt="XCUR" decoding="async">
+                                                        <div>
+                                                            <div>XCUR<span>eth</span></div>
+                                                            <div>XCUR</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/om.svg" alt="OM" decoding="async">
+                                                        <div>
+                                                            <div>OM<span>eth</span></div>
+                                                            <div>OM</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/vib.svg" alt="VIB" decoding="async">
+                                                        <div>
+                                                            <div>VIB<span>eth</span></div>
+                                                            <div>VIB</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/super.svg" alt="SUPER" decoding="async">
+                                                        <div>
+                                                            <div>SUPER<span>eth</span></div>
+                                                            <div>SUPER</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/klv.svg" alt="KLV" decoding="async">
+                                                        <div>
+                                                            <div>KLV<span>trx</span></div>
+                                                            <div>KLV</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/hoge.svg" alt="HOGE" decoding="async">
+                                                        <div>
+                                                            <div>HOGE<span>eth</span></div>
+                                                            <div>HOGE</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/srk.svg" alt="SRK" decoding="async">
+                                                        <div>
+                                                            <div>SRK<span>eth</span></div>
+                                                            <div>SRK</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/gusd.svg" alt="GUSD" decoding="async">
+                                                        <div>
+                                                            <div>GUSD<span>eth</span></div>
+                                                            <div>GUSD</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xym.svg" alt="XYM" decoding="async">
+                                                        <div>
+                                                            <div>XYM<span>xym</span></div>
+                                                            <div>XYM</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/chr.svg" alt="CHR" decoding="async">
+                                                        <div>
+                                                            <div>CHR<span>eth</span></div>
+                                                            <div>CHR</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ftt.svg" alt="FTT" decoding="async">
+                                                        <div>
+                                                            <div>FTT<span>eth</span></div>
+                                                            <div>FTT</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/lunc.svg" alt="Terra Classic" decoding="async">
+                                                        <div>
+                                                            <div>LUNC<span>lunc</span></div>
+                                                            <div>Terra Classic</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/nwc.svg" alt="NWC" decoding="async">
+                                                        <div>
+                                                            <div>NWC<span>eth</span></div>
+                                                            <div>NWC</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/kishu.svg" alt="KISHU" decoding="async">
+                                                        <div>
+                                                            <div>KISHU<span>eth</span></div>
+                                                            <div>KISHU</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/avax.svg" alt="AVAX" decoding="async">
+                                                        <div>
+                                                            <div>AVAX<span>xchain</span></div>
+                                                            <div>AVAX</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/keanu.svg" alt="KEANU" decoding="async">
+                                                        <div>
+                                                            <div>KEANU<span>eth</span></div>
+                                                            <div>KEANU</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/cake.svg" alt="CAKE" decoding="async">
+                                                        <div>
+                                                            <div>CAKE<span>bsc</span></div>
+                                                            <div>CAKE</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/iotx.svg" alt="IOTX" decoding="async">
+                                                        <div>
+                                                            <div>IOTX<span>iotx</span></div>
+                                                            <div>IOTX</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/theta.svg" alt="THETA" decoding="async">
+                                                        <div>
+                                                            <div>THETA<span>theta</span></div>
+                                                            <div>THETA</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/IOTA.svg" alt="IOTA" decoding="async">
+                                                        <div>
+                                                            <div>IOTA<span>iota</span></div>
+                                                            <div>IOTA</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/hot.svg" alt="HOT" decoding="async">
+                                                        <div>
+                                                            <div>HOT<span>eth</span></div>
+                                                            <div>HOT</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ust.svg" alt="TerraUSD" decoding="async">
+                                                        <div>
+                                                            <div>UST<span>luna</span></div>
+                                                            <div>TerraUSD</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/mx.svg" alt="MX" decoding="async">
+                                                        <div>
+                                                            <div>MX<span>eth</span></div>
+                                                            <div>MX</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/tfuel.svg" alt="TFUEL" decoding="async">
+                                                        <div>
+                                                            <div>TFUEL<span>theta</span></div>
+                                                            <div>TFUEL</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/luna.svg" alt="Terra" decoding="async">
+                                                        <div>
+                                                            <div>LUNA<span>luna</span></div>
+                                                            <div>Terra</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/pax.svg" alt="Pax Dollar" decoding="async">
+                                                        <div>
+                                                            <div>USDP<span>eth</span></div>
+                                                            <div>Pax Dollar</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/feg.svg" alt="FEG Token" decoding="async">
+                                                        <div>
+                                                            <div>FEG<span>eth</span></div>
+                                                            <div>FEG Token</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/knc.svg" alt="Kyber Network Crystal" decoding="async">
+                                                        <div>
+                                                            <div>KNC<span>eth</span></div>
+                                                            <div>Kyber Network Crystal</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/axs.svg" alt="Axie Infinity" decoding="async">
+                                                        <div>
+                                                            <div>AXS<span>eth</span></div>
+                                                            <div>Axie Infinity</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/c98.svg" alt="Coin98" decoding="async">
+                                                        <div>
+                                                            <div>C98<span>bsc</span></div>
+                                                            <div>Coin98</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/chz.svg" alt="Chiliz" decoding="async">
+                                                        <div>
+                                                            <div>CHZ<span>eth</span></div>
+                                                            <div>Chiliz</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/aave.svg" alt="Aave" decoding="async">
+                                                        <div>
+                                                            <div>AAVE<span>eth</span></div>
+                                                            <div>Aave</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/cvc.svg" alt="Civic" decoding="async">
+                                                        <div>
+                                                            <div>CVC<span>eth</span></div>
+                                                            <div>Civic</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/enj.svg" alt="Enjin Coin" decoding="async">
+                                                        <div>
+                                                            <div>ENJ<span>eth</span></div>
+                                                            <div>Enjin Coin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/grt.svg" alt="The Graph" decoding="async">
+                                                        <div>
+                                                            <div>GRT<span>eth</span></div>
+                                                            <div>The Graph</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/leash.svg" alt="Doge Killer" decoding="async">
+                                                        <div>
+                                                            <div>LEASH<span>eth</span></div>
+                                                            <div>Doge Killer</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/floki.svg" alt="Floki (ERC20)" decoding="async">
+                                                        <div>
+                                                            <div>FLOKI<span>eth</span></div>
+                                                            <div>Floki (ERC20)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/tko.svg" alt="Tokocrypto" decoding="async">
+                                                        <div>
+                                                            <div>TKO<span>bsc</span></div>
+                                                            <div>Tokocrypto</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/omg.svg" alt="OMG Network" decoding="async">
+                                                        <div>
+                                                            <div>OMG<span>eth</span></div>
+                                                            <div>OMG Network</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/cns.svg" alt="CentricSwap" decoding="async">
+                                                        <div>
+                                                            <div>CNS<span>bsc</span></div>
+                                                            <div>CentricSwap</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/gspi.svg" alt="Shopping.io Governance" decoding="async">
+                                                        <div>
+                                                            <div>GSPI<span>bsc</span></div>
+                                                            <div>Shopping.io Governance</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/atom.svg" alt="Cosmos" decoding="async">
+                                                        <div>
+                                                            <div>ATOM<span>atom</span></div>
+                                                            <div>Cosmos</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/spi.svg" alt="Shopping.io" decoding="async">
+                                                        <div>
+                                                            <div>SPI<span>eth</span></div>
+                                                            <div>Shopping.io</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/trvl.svg" alt="DTravel" decoding="async">
+                                                        <div>
+                                                            <div>TRVL<span>eth</span></div>
+                                                            <div>DTravel</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/rxcg.svg" alt="RXCGames" decoding="async">
+                                                        <div>
+                                                            <div>RXCG<span>bsc</span></div>
+                                                            <div>RXCGames</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/babydoge.svg" alt="Baby Doge Coin" decoding="async">
+                                                        <div
+                                                            ><div>BABYDOGE<span>bsc</span></div>
+                                                            <div>Baby Doge Coin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ava.svg" alt="Travala.com" decoding="async">
+                                                        <div>
+                                                            <div>AVAERC20<span>eth</span></div>
+                                                            <div>Travala.com</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xyo.svg" alt="XYO Network" decoding="async">
+                                                        <div>
+                                                            <div>XYO<span>eth</span></div>
+                                                            <div>XYO Network</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/poodl.svg" alt="Poodl Token" decoding="async">
+                                                        <div>
+                                                            <div>POODL<span>bsc</span></div>
+                                                            <div>Poodl Token</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bel.svg" alt="Bella Protocol" decoding="async">
+                                                        <div>
+                                                            <div>BEL<span>eth</span></div>
+                                                            <div>Bella Protocol</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/arpa.svg" alt="ARPA Chain" decoding="async">
+                                                        <div>
+                                                            <div>ARPA<span>eth</span></div>
+                                                            <div>ARPA Chain</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ava.svg" alt="Travala.com" decoding="async">
+                                                        <div>
+                                                            <div>AVABSC<span>bsc</span></div>
+                                                            <div>Travala.com</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/near.svg" alt="Near" decoding="async">
+                                                        <div>
+                                                            <div>NEAR<span>near</span></div>
+                                                            <div>Near</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/fluf.svg" alt="Fluffy Coin" decoding="async">
+                                                        <div>
+                                                            <div>FLUF<span>bsc</span></div>
+                                                            <div>Fluffy Coin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ntvrk.png" alt="Netvrk" decoding="async">
+                                                        <div>
+                                                            <div>NTVRK<span>eth</span></div>
+                                                            <div>Netvrk</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/raca.svg" alt="Radio Caca" decoding="async">
+                                                        <div>
+                                                            <div>RACA<span>bsc</span></div>
+                                                            <div>Radio Caca</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/sfund.png" alt="Seedify.fund" decoding="async">
+                                                        <div>
+                                                            <div>SFUND<span>bsc</span></div>
+                                                            <div>Seedify.fund</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/klay.svg" alt="Klaytn" decoding="async">
+                                                        <div>
+                                                            <div>KLAY<span>klay</span></div>
+                                                            <div>Klaytn</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/galaerc20.svg" alt="GALAERC20" decoding="async">
+                                                        <div>
+                                                            <div>GALAERC20<span>eth</span></div>
+                                                            <div>GALAERC20</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xdc.svg" alt="XDC Network" decoding="async">
+                                                        <div>
+                                                            <div>XDC<span>xdc</span></div>
+                                                            <div>XDC Network</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/KIBABSC.svg" alt="Kiba Inu (BSC)" decoding="async">
+                                                        <div>
+                                                            <div>KIBABSC<span>bsc</span></div>
+                                                            <div>Kiba Inu (BSC)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/PIT.svg" alt="PITBULL" decoding="async">
+                                                        <div>
+                                                            <div>PIT<span>bsc</span></div>
+                                                            <div>PITBULL</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/brise.svg" alt="Bitgert" decoding="async">
+                                                        <div>
+                                                            <div>BRISE<span>bsc</span></div>
+                                                            <div>Bitgert</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/nftb.svg" alt="NFTb" decoding="async">
+                                                        <div>
+                                                            <div>NFTB<span>bsc</span></div>
+                                                            <div>NFTb</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/rbif.svg" alt="Robo Inu Finance" decoding="async">
+                                                        <div>
+                                                            <div>RBIF<span>eth</span></div>
+                                                            <div>Robo Inu Finance</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/poolz.svg" alt="Poolz Finance" decoding="async">
+                                                        <div>
+                                                            <div>POOLZ<span>bsc</span></div>
+                                                            <div>Poolz Finance</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/shib.svg" alt="Shiba Inu (BSC)" decoding="async">
+                                                        <div>
+                                                            <div>SHIBBSC<span>bsc</span></div>
+                                                            <div>Shiba Inu (BSC)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/blocks.svg" alt="BLOCKS" decoding="async">
+                                                        <div>
+                                                            <div>BLOCKS<span>eth</span></div>
+                                                            <div>BLOCKS</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/avn.svg" alt="AVNRich" decoding="async">
+                                                        <div>
+                                                            <div>AVN<span>bsc</span></div>
+                                                            <div>AVNRich</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/cudos.svg" alt="Cudos" decoding="async">
+                                                        <div>
+                                                            <div>CUDOS<span>eth</span></div>
+                                                            <div>Cudos</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/marsh.svg" alt="Unmarshal" decoding="async">
+                                                        <div>
+                                                            <div>MARSH<span>bsc</span></div>
+                                                            <div>Unmarshal</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bifi.svg" alt="Beefy Finance" decoding="async">
+                                                        <div>
+                                                            <div>BIFI<span>bsc</span></div>
+                                                            <div>Beefy Finance</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ilv.svg" alt="Illuvium" decoding="async">
+                                                        <div>
+                                                            <div>ILV<span>eth</span></div>
+                                                            <div>Illuvium</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/KIBABSC.svg" alt="Kiba Inu (ERC20)" decoding="async">
+                                                        <div>
+                                                            <div>KIBA<span>eth</span></div>
+                                                            <div>Kiba Inu (ERC20)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ARV.svg" alt="Ariva" decoding="async">
+                                                        <div>
+                                                            <div>ARV<span>bsc</span></div>
+                                                            <div>Ariva</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/1inch.svg" alt="1inch Network" decoding="async">
+                                                        <div>
+                                                            <div>1INCH<span>eth</span></div>
+                                                            <div>1inch Network</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/volt.svg" alt="Volt Inu V2" decoding="async">
+                                                        <div>
+                                                            <div>VOLT<span>bsc</span></div>
+                                                            <div>Volt Inu V2</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/cult.svg" alt="Cult DAO" decoding="async">
+                                                        <div>
+                                                            <div>CULT<span>eth</span></div>
+                                                            <div>Cult DAO</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/1inchbsc.svg" alt="1Inch Network (BSC)" decoding="async">
+                                                        <div class="styles_currenciesItemCoin__
+                                                            1BK2X"><div>1INCHBSC<span>bsc</span></div>
+                                                            <div>1Inch Network (BSC)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/tomo.svg" alt="TomoChain" decoding="async">
+                                                        <div>
+                                                            <div>TOMO<span>eth</span></div>
+                                                            <div>TomoChain</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ape.png" alt="ApeCoin" decoding="async">
+                                                        <div>
+                                                            <div>APE<span>eth</span></div>
+                                                            <div>ApeCoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ghc.svg" alt="Galaxy Heroes Coin" decoding="async">
+                                                        <div>
+                                                            <div>GHC<span>bsc</span></div>
+                                                            <div>Galaxy Heroes Coin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/hotcross.svg" alt="Hot Cross" decoding="async">
+                                                        <div>
+                                                            <div>HOTCROSS<span>bsc</span></div>
+                                                            <div>Hot Cross</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/eth.svg" alt="Ethereum (Binance Smart Chain)" decoding="async">
+                                                        <div class="styles_currenciesItemC
+                                                            oin__1BK2X"><div>ETHBSC<span>bsc</span></div>
+                                                            <div>Ethereum (Binance Smart Chain)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/pika.svg" alt="Pika" decoding="async">
+                                                        <div>
+                                                            <div>PIKA<span>eth</span></div>
+                                                            <div>Pika</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/xcad.svg" alt="XCAD Network" decoding="async">
+                                                        <div>
+                                                            <div>XCAD<span>eth</span></div>
+                                                            <div>XCAD Network</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/gafa.svg" alt="Gafa" decoding="async">
+                                                        <div>
+                                                            <div>GAFA<span>bsc</span></div>
+                                                            <div>Gafa</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/btfa.svg" alt="Banana Task Force Ape" decoding="async">
+                                                        <div class="styles_currenciesItemCoin__
+                                                            1BK2X"><div>BTFA<span>eth</span></div>
+                                                            <div>Banana Task Force Ape</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/BTTCBSC.svg" alt="BitTorrent-NEW (Binance Smart Chain)" decoding="async">
+                                                        <div class="styles_currenci
+                                                            esItemCoin__1BK2X"><div>BTTCBSC<span>bsc</span></div>
+                                                            <div>BitTorrent-NEW (Binance Smart Chain)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/tenshi.svg" alt="Tenshi" decoding="async">
+                                                        <div>
+                                                            <div>TENSHI<span>eth</span></div>
+                                                            <div>Tenshi</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bttc.svg" alt="BitTorrent-New (TRC 20)" decoding="async">
+                                                        <div class="styles_currenciesItemCoin__
+                                                            1BK2X"><div>BTTC<span>trx</span></div>
+                                                            <div>BitTorrent-New (TRC 20)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/gal.svg" alt="Project Galaxy" decoding="async">
+                                                        <div>
+                                                            <div>GAL<span>bsc</span></div>
+                                                            <div>Project Galaxy</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/USDCMATIC.svg" alt="USD Coin (Polygon)" decoding="async">
+                                                        <div class="styles_currenciesItemCoin__
+                                                            1BK2X"><div>USDCMATIC<span>matic</span></div>
+                                                            <div>USD Coin (Polygon)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dgmoon.svg" alt="DogeMoon" decoding="async">
+                                                        <div>
+                                                            <div>DGMOON<span>bsc</span></div>
+                                                            <div>DogeMoon</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ethw.svg" alt="EthereumPoW" decoding="async">
+                                                        <div>
+                                                            <div>ETHW<span>ethw</span></div>
+                                                            <div>EthereumPoW</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/guard.svg" alt="Guardian" decoding="async">
+                                                        <div>
+                                                            <div>GUARD<span>bsc</span></div>
+                                                            <div>Guardian</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/floki.svg" alt="Floki (BSC)" decoding="async">
+                                                        <div>
+                                                            <div>FLOKIBSC<span>bsc</span></div>
+                                                            <div>Floki (BSC)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ggtkn.svg" alt="GG TOKEN" decoding="async">
+                                                        <div>
+                                                            <div>GGTKN<span>bsc</span></div>
+                                                            <div>GG TOKEN</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/dogecoin.svg" alt="Buff Doge Coin" decoding="async">
+                                                        <div
+                                                            ><div>DOGECOIN<span>bsc</span></div>
+                                                            <div>Buff Doge Coin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/usddtrc20.svg" alt="USDD (TRC20)" decoding="async">
+                                                        <div>
+                                                            <div>USDDTRC20<span>trx</span></div>
+                                                            <div>USDD (TRC20)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/usdtsol.svg" alt="Tether (SOL)" decoding="async">
+                                                        <div>
+                                                            <div>USDTSOL<span>sol</span></div>
+                                                            <div>Tether (SOL)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/quack.svg" alt="RichQuack" decoding="async">
+                                                        <div>
+                                                            <div>QUACK<span>bsc</span></div>
+                                                            <div>RichQuack</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/TTC.svg" alt="TechTrees" decoding="async">
+                                                        <div>
+                                                            <div>TTC<span>bsc</span></div>
+                                                            <div>TechTrees</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/BONE.svg" alt="Bone ShibaSwap" decoding="async">
+                                                        <div
+                                                            ><div>BONE<span>eth</span></div>
+                                                            <div>Bone ShibaSwap</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/divi.svg" alt="Divi" decoding="async">
+                                                        <div>
+                                                            <div>DIVI<span>divi</span></div>
+                                                            <div>Divi</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/bsv.svg" alt="Bitcoin SV" decoding="async">
+                                                        <div>
+                                                            <div>BSV<span>bsv</span></div>
+                                                            <div>Bitcoin SV</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ONIGI.svg" alt="Onigiri Neko" decoding="async">
+                                                        <div>
+                                                            <div>ONIGI<span>eth</span></div>
+                                                            <div>Onigiri Neko</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/tusdtrc20.svg" alt="TrueUSD (Tron)" decoding="async">
+                                                        <div class="styles_currenciesItemCoin__1BK2X
+                                                            "><div>TUSDTRC20<span>trx</span></div>
+                                                            <div>TrueUSD (Tron)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/jasmy.svg" alt="JasmyCoin" decoding="async">
+                                                        <div>
+                                                            <div>JASMY<span>eth</span></div>
+                                                            <div>JasmyCoin</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/brgbsc.svg" alt="Bridge Oracle" decoding="async">
+                                                        <div>
+                                                            <div>BRGBSC<span>bsc</span></div>
+                                                            <div>Bridge Oracle</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/fitfi.svg" alt="Step App (AVAXC)" decoding="async">
+                                                        <div>
+                                                            <div>FITFI<span>avaxc</span></div>
+                                                            <div>Step App (AVAXC)</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/cusd.svg" alt="Celo Dollar" decoding="async">
+                                                        <div>
+                                                            <div>CUSD<span>celo</span></div>
+                                                            <div>Celo Dollar</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="coin-option"  style="display: none;">
+                                                        <img width="30" height="30" src="./img/Coins settings/ZBC.svg" alt="Zebec Protocol" decoding="async">
+                                                        <div>
+                                                            <div>ZBC<span>sol</span></div>
+                                                            <div>Zebec Protocol</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <input type="hidden" class="option" name="namesubmit" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="price-input">
+                                            <label for="price-input">Price</label>
+                                            <div class="usd-currency position-relative">
+                                                <input type="text" id="price-input">
+                                                <span class="position-absolute">USD</span>
+                                            </div>
+                                        </div>
+                                        <div class="order-info-input">
+                                            <label for="order-discription">Order description</label>
+                                            <input type="text" id="order-discription">
+                                        </div>
+                                        <div class="pay-currency">
+                                            <label for="order-id">Order ID</label>
+                                            <input type="text" id="order-id">
+                                        </div>
+                                        <div class="checkbox-input d-flex align-items-center mb-3">
+                                            <div class="fix-rate-check d-flex align-items-center w-50">
+                                                <input type="checkbox" id="fixed-rate">
+                                                <label for="fixed-rate">Fixed rate<span class="iconify" data-icon="material-symbols:error-outline-rounded"></span></label>
+                                            </div>
+                                            <div class="fee-paid d-flex align-items-center w-50">
+                                                <input type="checkbox" id="fee-paid">
+                                                <label for="fee-paid">Fee paid by user<span class="iconify" data-icon="material-symbols:error-outline-rounded"></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="cont-btn">
+                                            <a href="#" type="submit" class="w-100 text-center">Confirm</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="history-box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Payment link ID</th>
+                                    <th>Order ID</th>
+                                    <th>Price</th>
+                                    <th>Currency</th>
+                                    <th>Invoice Url</th>
+                                    <th>Created at</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4525881665</td>
+                                    <td>test</td>
+                                    <td>10 USD</td>
+                                    <td>USDTTRC20</td>
+                                    <td>nowpayments.io/payment/?iid=4543813406</td>
+                                    <td>06 Feb 2023, 09:43 am</td>
+                                </tr>
+                                <tr>
+                                    <td>4525881665</td>
+                                    <td>test</td>
+                                    <td>10 USD</td>
+                                    <td>USDTTRC20</td>
+                                    <td>nowpayments.io/payment/?iid=4543813406</td>
+                                    <td>06 Feb 2023, 09:43 am</td>
+                                </tr>
+                                <tr>
+                                    <td>4525881665</td>
+                                    <td>test</td>
+                                    <td>10 USD</td>
+                                    <td>USDTTRC20</td>
+                                    <td>nowpayments.io/payment/?iid=4543813406</td>
+                                    <td>06 Feb 2023, 09:43 am</td>
+                                </tr>
+                                <tr>
+                                    <td>4525881665</td>
+                                    <td>test</td>
+                                    <td>10 USD</td>
+                                    <td>USDTTRC20</td>
+                                    <td>nowpayments.io/payment/?iid=4543813406</td>
+                                    <td>06 Feb 2023, 09:43 am</td>
+                                </tr>
+                                <tr>
+                                    <td>4525881665</td>
+                                    <td>test</td>
+                                    <td>10 USD</td>
+                                    <td>USDTTRC20</td>
+                                    <td>nowpayments.io/payment/?iid=4543813406</td>
+                                    <td>06 Feb 2023, 09:43 am</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+     
+        <!--  jquary cdn  -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <!-- iconify -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- my js -->
+        <script src="./js/script.js"></script>
+        <script>
+        $(function() {
+            // Set
+            var main = $('div.mm-dropdown #textfirst')
+            var li = $('div.mm-dropdown > ul#coin-list > li.coin-option')
+            var inputoption = $("div.mm-dropdown .option")
+            // var default_text = '<input type="search" />
+            var default_text = '<div class="d-flex flex-column w-100">All currencies <span>Client can choose any supported crypto for payment</span></div><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png" width="10" height="10" class="down" />';
+          
+            // Animation
+            main.click(function() {
+              main.html(default_text);
+              li.toggle('fast');
+            });
+          
+            // Insert Data
+            li.click(function() {
+              // hide
+              li.toggle('fast');
+              var livalue = $(this).data('value');
+              var lihtml = $(this).html();
+              main.html(lihtml);
+              inputoption.val(livalue);
+            });
+            $("#textfirst, ul#coin-list > li.coin-option").click(function(){
+                $("#coin-list").toggle();
+            });
+          });
+          </script>
+    </body>
+</html>

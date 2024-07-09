@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ducument</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!-- TAB BUTTON -->
+        <div class="d-flex align-items-start">
+            <div class="aside-menu-bar">
+                <div class="navigation-bar"> 
+                    <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                    <div class="nav flex-column nav-pills">
+                        <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                        <li class="nav-link"><a href="./pos-payments.html"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                        <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-link.html">Payment Link</a></li>
+                                <li class="nav-link"><a href="./pos-donations.html">Donations</a></li>
+                                <li class="nav-link"><a href="./pos-subscriptions.html">Subscriptions</a></li>
+                                <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                        <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                        <li class="nav-link"><a href="./pos-fiat-withdrawals.html"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                        <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                        <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-settings.html">Payment settings</a></li>
+                                <li class="nav-link"><a href="./pos-account-settings.html" class="active">Account settings</a></li>
+                                <li class="nav-link"><a href="./pos-coins-settings.html">Coins settings</a></li>
+                            </ul></li>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                        <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                    </ul>
+                    <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+                </div>
+            </div>
+            
+            <div class="tab-pane" id="payment-setting" >
+                <div class="account-setting-content">
+                    <div class="title">
+                        <h2>Account Settings</h2>
+                    </div>
+                    <div class="title">
+                        <h3>My Team</h3>
+                    </div>
+                    <div class="payment-box my-team">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Is Active</th>
+                                    <th>Access</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="payment-btn">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#new-user-Modal">Add new user</a>
+                        </div>
+                        <!-- Modal -->
+                        <div class="account-setting-new-user modal fade" id="new-user-Modal" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="new-user-popup">
+                                    <h4>Add new user</h4>
+                                    <p>This user should have a NOWPayments account</p>
+                                    <div class="user-mail">
+                                        <input class="styles_input" type="text" placeholder="E-mail" value="">
+                                    </div>
+                                    <div class="user-mail">
+                                        <input class="styles_input" type="text" placeholder="Role" value="">
+                                    </div>
+                                    <div class="style-table">
+                                    <table>
+                                        <thead class="style-head">
+                                            <tr>
+                                                <th>Assets</th>
+                                                <th>Access</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Invoice</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Payments</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Purchases</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>API Keys</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Balances</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Payout Wallets</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Donation Link</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fiat Withdrawalss</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Coins Settings</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Referral Program</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Team Roles</td>
+                                                <td><select class="styles_select__1vdEt" type="text">
+                                                    <option>view</option>
+                                                    <option>change</option>
+                                                    <option>disable</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                    <div class="payment-btn d-flex justify-content-between">
+                                        <a href="#" data-bs-dismiss="modal">Cancel</a>
+                                        <a href="#">Invite</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Profile</h3>
+                    </div>
+                    <div class="payment-box profile-box">
+                        <div class="title">
+                            <h5>Company</h5>
+                            <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                        </div>
+                        <input class="common_textField" type="text" value="">
+                        <div class="payment-btn">
+                            <a href="#">Save changes</a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Shopify</h3>
+                    </div>
+                    <div class="payment-box shopify">
+                        <div class="shopify-form">
+                            <p>Shopify Api Key</p>
+                            <input class="common_textField" type="text" value="">
+                            <p>Shopify Admin API access token</p>
+                            <input class="common_textField" type="text" value="">
+                            <p>Shop domain</p>
+                            <input class="common_textField" type="text" value="">
+                            <p>Shop name</p>
+                            <input class="common_textField" type="text" value="">
+                            <p>NOWPayments Api key</p>
+                            <select>
+                                <option value="ADW8TSE-72EM8JJ-MR9M27C-4EQPVXS">ADW8TSE-72EM8JJ-MR9M27C-4EQPVXS</option>
+                                <option value="76C4NVN-Q9SM5WX-P0JJSB1-21YA8K3">76C4NVN-Q9SM5WX-P0JJSB1-21YA8K3</option>
+                                <option value="Q85WD2X-54DM76Z-PEER3M2-8W1BH3H">Q85WD2X-54DM76Z-PEER3M2-8W1BH3H</option>
+                                <option value="KEQWAS0-KMN4D2W-QNWWCEX-6P1Y14M">KEQWAS0-KMN4D2W-QNWWCEX-6P1Y14M</option>
+                                <option value="A47R0TG-N964QNZ-HTFYFK6-KZDFZFX">A47R0TG-N964QNZ-HTFYFK6-KZDFZFX</option>
+                                <option value="30MGSS7-315MRBF-PH3DGF4-9NWQR60">30MGSS7-315MRBF-PH3DGF4-9NWQR60</option>
+                            </select>
+                            <div class="payment-btn connect-shopify">
+                                <a href="#">Connect to Shopify</a>
+                            </div>
+                            <p class="style-text">In Shopify please add a payment method at <span class="style-blue">Settings `> Payments `> Manual Payment Methods</span>
+                                 with the name <span class="stlye-pink">Pay in crypto with NOWPayments</span>
+                            </p>
+                            <p class="style-text">In Shopify please paste following script at <span class="style-blue">Settings `> Checkout `> Additional Scripts</span></p>
+                        </div>
+                        <div class="additional-script">
+                            <div class="title">
+                                <h5>Additional Script</h5>
+                            </div>
+                            <p class="style-code">
+                               <span><</span> script id="np_popup" src="https://nowpayments.io/js/shopify.js" data-api="ADW8TSE-72EM8JJ-MR9M27C-4EQPVXS" <span>></span> <span><</span> /script <span>></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Password</h3>
+                    </div>
+                    <div class="payment-box password-box">
+                        <div class="password-form">
+                        <p>You can change your password at any time. After that you will have to sign in</p>
+                        <input class="current-psw" type="password" placeholder="Current password">
+                        <input class="password-field" type="password" placeholder="New password">
+                        <input class="password-field" type="password" placeholder="Confirm new password">
+                        </div>
+                        <div class="payment-btn">
+                            <a href="#">Change password</a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Two step authentification</h3>
+                    </div>
+                    <div class="payment-box authentication-box">
+                        <div class="authenticate-form">
+                            <p>Require a security key or code in addition to your password.</p>
+                            <div class="form-check form-switch">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Off</label>
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Apps</h3>
+                    </div>
+                    <div class="payment-box apps">
+                        <div class="app-content">
+                            <p>If you are a service owner, you can link NOWPayments with your application. Thanks to 0auth technology, NOWPayments provides access to your app both for you and your users.</p>
+                            <div class="payment-btn">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#user-app-Modal">Create app</a>
+                                <!-- Modal -->
+                                <div class="account-setting-new-user modal fade" id="user-app-Modal" aria-hidden="true">
+                                    <div class="modal-dialog modal-box">
+                                        <div class="modal-content">
+                                            <div class="user-app-popup">
+                                                <h3>Create App</h3>
+                                                <div class="create-app">
+                                                    <div class="app-content-detail">
+                                                        <div class="app-info">
+                                                            <h4>Name</h4>
+                                                            <input type="text" placeholder="App Name" class="styles_withoutIcon__2egNS" name="name" value="">
+                                                            <h4>Description</h4>
+                                                            <textarea placeholder="App Description" name="desc" class="styles_wrapper__3fYvH"></textarea>
+                                                            <h4>App Site</h4>
+                                                            <input type="text" placeholder="App Site" class="styles_withoutIcon__2egNS" name="link" value="">
+                                                            <h4>Secret key</h4>
+                                                            <input type="text" placeholder="Some string" class="styles_withoutIcon__2egNS" name="secret" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-block">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Access</th>
+                                                                    <th>Read</th>
+                                                                    <th>Write</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Donation</td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wallet</td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Profile</td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>ApiKeys</td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Coins</td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="payment-btn d-flex justify-content-end">
+                                                    <a href="#" class="create-btn" data-bs-dismiss="modal">Cancel</a>
+                                                    <a href="#">Create</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <!--  jquary cdn  -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <!-- iconify -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- my js -->
+        <script src="./js/script.js"></script>
+    
+    </body>
+</html>

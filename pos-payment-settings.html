@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ducument</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!-- TAB BUTTON -->
+        <div class="d-flex align-items-start">
+            <div class="aside-menu-bar">
+                <div class="navigation-bar"> 
+                    <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                    <div class="nav flex-column nav-pills">
+                        <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                        <li class="nav-link"><a href="./pos-payments.html"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                        <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-link.html">Payment Link</a></li>
+                                <li class="nav-link"><a href="./pos-donations.html">Donations</a></li>
+                                <li class="nav-link"><a href="./pos-subscriptions.html">Subscriptions</a></li>
+                                <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                        <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                        <li class="nav-link"><a href="./pos-fiat-withdrawals.html"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                        <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                        <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-settings.html" class="active">Payment settings</a></li>
+                                <li class="nav-link"><a href="./pos-account-settings.html">Account settings</a></li>
+                                <li class="nav-link"><a href="./pos-coins-settings.html">Coins settings</a></li>
+                            </ul></li>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                        <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                    </ul>
+                    <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+                </div>
+            </div>
+            
+
+            <!-- payment -setting -->
+            <div class="tab-pane" id="payment-setting" >
+                <div class="payment-setting-content">
+                    <div class="title">
+                        <h2>Store Settings</h2>
+                    </div>
+                    <div class="title">
+                        <h3>Payout Wallet</h3>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="payment-box payout-wallet">
+                        <form>
+                            <table id="data_table">
+                                <thead>
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>Address</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <tr>
+                                        <td>BTC</td>
+                                        <td><input type="text" value="1NYzhKTGbShDUHuRPnuDwZh2FMBeqdrEvZ"></td>
+                                        <td><span class="iconify" data-icon="mdi:bin"></span></td>
+                                    </tr>
+                                    <!-- <tr class="new-row">
+                                        OPTION CODE
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="payment-btn">
+                            <a href="#" class="add-row-btn">Add another wallet</a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>API Keys</h3>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="payment-box api-box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Key</th>
+                                    <th>Copy</th>
+                                    <th>Status</th>
+                                    <th>Created at</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>30MGSS7-315MRBF-PH3DGF4-9NWQR60</td>
+                                    <td><span class="iconify" data-icon="material-symbols:content-copy-outline-rounded"></span></td>
+                                    <td>active</td>
+                                    <td>25 Jan 2023, 07:17 pm</td>
+                                    <td><span class="iconify" data-icon="mdi:bin"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>30MGSS7-315MRBF-PH3DGF4-9NWQR60</td>
+                                    <td><span class="iconify" data-icon="material-symbols:content-copy-outline-rounded"></span></td>
+                                    <td>active</td>
+                                    <td>25 Jan 2023, 07:17 pm</td>
+                                    <td><span class="iconify" data-icon="mdi:bin"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="apikey-gen-box hide-btn">
+                            <p>Your new API key is created:</p>
+                            <p><b>SP73YDX-WGP4EHN-Q5N4467-5SGFKCS</b></p>
+                        </div>
+                        <div class="payment-btn api-generate-btn">
+                            <a href="#">Add New Key</a>
+                        </div>
+                        <div class="api-documention">
+                            <a href="#">API documentations</a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Base Currency</h3>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="payment-box currency">
+                        <select type="text">
+                            <option value="AUD">AUD</option>
+                            <option value="BRL">BRL</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CNY">CNY</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="ILS">ILS</option>
+                            <option value="INR">INR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="MYR">MYR</option>
+                            <option value="NGN">NGN</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="RUB">RUB</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="TRY">TRY</option>
+                            <option value="USD">USD</option>
+                            <option value="ZAR">ZAR</option>
+                        </select>
+                    </div>
+                    <div class="title">
+                        <h3>First currency on the list (Invoices)</h3>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="payment-box invoice">
+                        <div class="optional-box">
+                            <input type="text" list="currencies-list-first-invoice" placeholder="Optional" class="styles_input__mFj-v" value="">
+                            <datalist id="currencies-list-first-invoice"><option value="1INCH">1INCH</option>
+                                <option value="1INCHBSC">1INCHBSC</option>
+                                <option value="AAVE">AAVE</option>
+                                <option value="AE">AE</option>
+                                <option value="ALGO">ALGO</option>
+                                <option value="APE">APE</option>
+                                <option value="ARK">ARK</option>
+                                <option value="ARPA">ARPA</option>
+                                <option value="ARV">ARV</option>
+                                <option value="ATOM">ATOM</option>
+                                <option value="AVA">AVA</option>
+                                <option value="AVABSC">AVABSC</option>
+                                <option value="AVAERC20">AVAERC20</option>
+                                <option value="AVAX">AVAX</option>
+                                <option value="AVN">AVN</option>
+                                <option value="AXS">AXS</option>
+                                <option value="BABYDOGE">BABYDOGE</option>
+                                <option value="BAT">BAT</option>
+                                <option value="BCD">BCD</option>
+                                <option value="BCH">BCH</option>
+                                <option value="BEAM">BEAM</option>
+                                <option value="BEL">BEL</option>
+                                <option value="BIFI">BIFI</option>
+                                <option value="BLOCKS">BLOCKS</option>
+                                <option value="BNBMAINNET">BNBMAINNET</option>
+                                <option value="BONE">BONE</option>
+                                <option value="BRGBSC">BRGBSC</option>
+                                <option value="BRISE">BRISE</option>
+                                <option value="BSV">BSV</option>
+                                <option value="BTFA">BTFA</option>
+                                <option value="BTG">BTG</option>
+                                <option value="BTTC">BTTC</option>
+                                <option value="BTTCBSC">BTTCBSC</option>
+                                <option value="BUSD">BUSD</option>
+                                <option value="BUSDBSC">BUSDBSC</option>
+                                <option value="C98">C98</option>
+                                <option value="CAKE">CAKE</option>
+                                <option value="CHR">CHR</option>
+                                <option value="CHZ">CHZ</option>
+                                <option value="CNS">CNS</option>
+                                <option value="COTI">COTI</option>
+                                <option value="CRO">CRO</option>
+                                <option value="CTSI">CTSI</option>
+                                <option value="CUDOS">CUDOS</option>
+                                <option value="CULT">CULT</option>
+                                <option value="CUSD">CUSD</option>
+                                <option value="CVC">CVC</option>
+                                <option value="DAI">DAI</option>
+                                <option value="DAO">DAO</option>
+                                <option value="DASH">DASH</option>
+                                <option value="DCR">DCR</option>
+                                <option value="DGD">DGD</option>
+                                <option value="DGMOON">DGMOON</option>
+                                <option value="DIVI">DIVI</option>
+                                <option value="DOGE">DOGE</option>
+                                <option value="DOGECOIN">DOGECOIN</option>
+                                <option value="DOT">DOT</option>
+                                <option value="EGLD">EGLD</option>
+                                <option value="ENJ">ENJ</option>
+                                <option value="EOS">EOS</option>
+                                <option value="ETC">ETC</option>
+                                <option value="ETHBSC">ETHBSC</option>
+                                <option value="ETHW">ETHW</option>
+                                <option value="FEG">FEG</option>
+                                <option value="FIL">FIL</option>
+                                <option value="FIRO">FIRO</option>
+                                <option value="FITFI">FITFI</option>
+                                <option value="FLOKI">FLOKI</option>
+                                <option value="FLOKIBSC">FLOKIBSC</option>
+                                <option value="FLUF">FLUF</option>
+                                <option value="FRONT">FRONT</option>
+                                <option value="FTM">FTM</option>
+                                <option value="FTMMAINNET">FTMMAINNET</option>
+                                <option value="FTT">FTT</option>
+                                <option value="FUN">FUN</option>
+                                <option value="GAFA">GAFA</option>
+                                <option value="GAL">GAL</option>
+                                <option value="GALAERC20">GALAERC20</option>
+                                <option value="GAS">GAS</option>
+                                <option value="GGTKN">GGTKN</option>
+                                <option value="GHC">GHC</option>
+                                <option value="GRS">GRS</option>
+                                <option value="GRT">GRT</option>
+                                <option value="GSPI">GSPI</option>
+                                <option value="GT">GT</option>
+                                <option value="GUARD">GUARD</option>
+                                <option value="GUSD">GUSD</option>
+                                <option value="HBAR">HBAR</option>
+                                <option value="HOGE">HOGE</option>
+                                <option value="HOT">HOT</option>
+                                <option value="HOTCROSS">HOTCROSS</option>
+                                <option value="HT">HT</option>
+                                <option value="ICX">ICX</option>
+                                <option value="ILV">ILV</option>
+                                <option value="IOTA">IOTA</option>
+                                <option value="IOTX">IOTX</option>
+                                <option value="JASMY">JASMY</option>
+                                <option value="KEANU">KEANU</option>
+                                <option value="KIBA">KIBA</option>
+                                <option value="KIBABSC">KIBABSC</option>
+                                <option value="KISHU">KISHU</option>
+                                <option value="KLAY">KLAY</option>
+                                <option value="KLV">KLV</option>
+                                <option value="KMD">KMD</option>
+                                <option value="KNC">KNC</option>
+                                <option value="LEASH">LEASH</option>
+                                <option value="LGCY">LGCY</option>
+                                <option value="LINK">LINK</option>
+                                <option value="LSK">LSK</option>
+                                <option value="LTC">LTC</option>
+                                <option value="LUNA">LUNA</option>
+                                <option value="LUNC">LUNC</option>
+                                <option value="MANA">MANA</option>
+                                <option value="MARSH">MARSH</option>
+                                <option value="MATIC">MATIC</option>
+                                <option value="MCO">MCO</option>
+                                <option value="MX">MX</option>
+                                <option value="NANO">NANO</option>
+                                <option value="NEAR">NEAR</option>
+                                <option value="NEO">NEO</option>
+                                <option value="NFTB">NFTB</option>
+                                <option value="NOW">NOW</option>
+                                <option value="NPXS">NPXS</option>
+                                <option value="NTVRK">NTVRK</option>
+                                <option value="NWC">NWC</option>
+                                <option value="OCEAN">OCEAN</option>
+                                <option value="OKB">OKB</option>
+                                <option value="OM">OM</option>
+                                <option value="OMG">OMG</option>
+                                <option value="ONE">ONE</option>
+                                <option value="ONIGI">ONIGI</option>
+                                <option value="ONT">ONT</option>
+                                <option value="PAX">PAX</option>
+                                <option value="PIKA">PIKA</option>
+                                <option value="PIT">PIT</option>
+                                <option value="POODL">POODL</option>
+                                <option value="POOLZ">POOLZ</option>
+                                <option value="QTUM">QTUM</option>
+                                <option value="QUACK">QUACK</option>
+                                <option value="RACA">RACA</option>
+                                <option value="RBIF">RBIF</option>
+                                <option value="REP">REP</option>
+                                <option value="RVN">RVN</option>
+                                <option value="RXCG">RXCG</option>
+                                <option value="SAND">SAND</option>
+                                <option value="SFUND">SFUND</option>
+                                <option value="SHIB">SHIB</option>
+                                <option value="SHIBBSC">SHIBBSC</option>
+                                <option value="SPI">SPI</option>
+                                <option value="SRK">SRK</option>
+                                <option value="STPT">STPT</option>
+                                <option value="STRAX">STRAX</option>
+                                <option value="SUPER">SUPER</option>
+                                <option value="SXPMAINNET">SXPMAINNET</option>
+                                <option value="TENSHI">TENSHI</option>
+                                <option value="TFUEL">TFUEL</option>
+                                <option value="THETA">THETA</option>
+                                <option value="TKO">TKO</option>
+                                <option value="TOMO">TOMO</option>
+                                <option value="TON">TON</option>
+                                <option value="TRVL">TRVL</option>
+                                <option value="TTC">TTC</option>
+                                <option value="TUSD">TUSD</option>
+                                <option value="TUSDTRC20">TUSDTRC20</option>
+                                <option value="UNI">UNI</option>
+                                <option value="USDC">USDC</option>
+                                <option value="USDCMATIC">USDCMATIC</option>
+                                <option value="USDDTRC20">USDDTRC20</option>
+                                <option value="USDP">USDP</option>
+                                <option value="USDT">USDT</option>
+                                <option value="USDTBSC">USDTBSC</option>
+                                <option value="USDTERC20">USDTERC20</option>
+                                <option value="USDTSOL">USDTSOL</option>
+                                <option value="USDTTRC20">USDTTRC20</option>
+                                <option value="UST">UST</option>
+                                <option value="VET">VET</option>
+                                <option value="VIB">VIB</option>
+                                <option value="VOLT">VOLT</option>
+                                <option value="WABI">WABI</option>
+                                <option value="WAVES">WAVES</option>
+                                <option value="XCAD">XCAD</option>
+                                <option value="XCUR">XCUR</option>
+                                <option value="XDC">XDC</option>
+                                <option value="XEM">XEM</option>
+                                <option value="XLM">XLM</option>
+                                <option value="XTZ">XTZ</option>
+                                <option value="XVG">XVG</option>
+                                <option value="XYM">XYM</option>
+                                <option value="XYO">XYO</option>
+                                <option value="XZC">XZC</option>
+                                <option value="YFI">YFI</option>
+                                <option value="ZBC">ZBC</option>
+                                <option value="ZEC">ZEC</option>
+                                <option value="ZEN">ZEN</option>
+                                <option value="ZIL">ZIL</option>
+                            </datalist>
+                        </div>
+                        <img src="./img/first-currency-invoice.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h3>First currency on the list (Donate widget)</h3>
+                        <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                    </div>
+                    <div class="payment-box invoice">
+                        <div class="optional-box">
+                            <input type="text" list="currencies-list-first-invoice" placeholder="Optional" class="styles_input__mFj-v" value="">
+                            <datalist id="currencies-list-first-invoice"><option value="1INCH">1INCH</option>
+                                <option value="1INCHBSC">1INCHBSC</option>
+                                <option value="AAVE">AAVE</option>
+                                <option value="AE">AE</option>
+                                <option value="ALGO">ALGO</option>
+                                <option value="APE">APE</option>
+                                <option value="ARK">ARK</option>
+                                <option value="ARPA">ARPA</option>
+                                <option value="ARV">ARV</option>
+                                <option value="ATOM">ATOM</option>
+                                <option value="AVA">AVA</option>
+                                <option value="AVABSC">AVABSC</option>
+                                <option value="AVAERC20">AVAERC20</option>
+                                <option value="AVAX">AVAX</option>
+                                <option value="AVN">AVN</option>
+                                <option value="AXS">AXS</option>
+                                <option value="BABYDOGE">BABYDOGE</option>
+                                <option value="BAT">BAT</option>
+                                <option value="BCD">BCD</option>
+                                <option value="BCH">BCH</option>
+                                <option value="BEAM">BEAM</option>
+                                <option value="BEL">BEL</option>
+                                <option value="BIFI">BIFI</option>
+                                <option value="BLOCKS">BLOCKS</option>
+                                <option value="BNBMAINNET">BNBMAINNET</option>
+                                <option value="BONE">BONE</option>
+                                <option value="BRGBSC">BRGBSC</option>
+                                <option value="BRISE">BRISE</option>
+                                <option value="BSV">BSV</option>
+                                <option value="BTFA">BTFA</option>
+                                <option value="BTG">BTG</option>
+                                <option value="BTTC">BTTC</option>
+                                <option value="BTTCBSC">BTTCBSC</option>
+                                <option value="BUSD">BUSD</option>
+                                <option value="BUSDBSC">BUSDBSC</option>
+                                <option value="C98">C98</option>
+                                <option value="CAKE">CAKE</option>
+                                <option value="CHR">CHR</option>
+                                <option value="CHZ">CHZ</option>
+                                <option value="CNS">CNS</option>
+                                <option value="COTI">COTI</option>
+                                <option value="CRO">CRO</option>
+                                <option value="CTSI">CTSI</option>
+                                <option value="CUDOS">CUDOS</option>
+                                <option value="CULT">CULT</option>
+                                <option value="CUSD">CUSD</option>
+                                <option value="CVC">CVC</option>
+                                <option value="DAI">DAI</option>
+                                <option value="DAO">DAO</option>
+                                <option value="DASH">DASH</option>
+                                <option value="DCR">DCR</option>
+                                <option value="DGD">DGD</option>
+                                <option value="DGMOON">DGMOON</option>
+                                <option value="DIVI">DIVI</option>
+                                <option value="DOGE">DOGE</option>
+                                <option value="DOGECOIN">DOGECOIN</option>
+                                <option value="DOT">DOT</option>
+                                <option value="EGLD">EGLD</option>
+                                <option value="ENJ">ENJ</option>
+                                <option value="EOS">EOS</option>
+                                <option value="ETC">ETC</option>
+                                <option value="ETHBSC">ETHBSC</option>
+                                <option value="ETHW">ETHW</option>
+                                <option value="FEG">FEG</option>
+                                <option value="FIL">FIL</option>
+                                <option value="FIRO">FIRO</option>
+                                <option value="FITFI">FITFI</option>
+                                <option value="FLOKI">FLOKI</option>
+                                <option value="FLOKIBSC">FLOKIBSC</option>
+                                <option value="FLUF">FLUF</option>
+                                <option value="FRONT">FRONT</option>
+                                <option value="FTM">FTM</option>
+                                <option value="FTMMAINNET">FTMMAINNET</option>
+                                <option value="FTT">FTT</option>
+                                <option value="FUN">FUN</option>
+                                <option value="GAFA">GAFA</option>
+                                <option value="GAL">GAL</option>
+                                <option value="GALAERC20">GALAERC20</option>
+                                <option value="GAS">GAS</option>
+                                <option value="GGTKN">GGTKN</option>
+                                <option value="GHC">GHC</option>
+                                <option value="GRS">GRS</option>
+                                <option value="GRT">GRT</option>
+                                <option value="GSPI">GSPI</option>
+                                <option value="GT">GT</option>
+                                <option value="GUARD">GUARD</option>
+                                <option value="GUSD">GUSD</option>
+                                <option value="HBAR">HBAR</option>
+                                <option value="HOGE">HOGE</option>
+                                <option value="HOT">HOT</option>
+                                <option value="HOTCROSS">HOTCROSS</option>
+                                <option value="HT">HT</option>
+                                <option value="ICX">ICX</option>
+                                <option value="ILV">ILV</option>
+                                <option value="IOTA">IOTA</option>
+                                <option value="IOTX">IOTX</option>
+                                <option value="JASMY">JASMY</option>
+                                <option value="KEANU">KEANU</option>
+                                <option value="KIBA">KIBA</option>
+                                <option value="KIBABSC">KIBABSC</option>
+                                <option value="KISHU">KISHU</option>
+                                <option value="KLAY">KLAY</option>
+                                <option value="KLV">KLV</option>
+                                <option value="KMD">KMD</option>
+                                <option value="KNC">KNC</option>
+                                <option value="LEASH">LEASH</option>
+                                <option value="LGCY">LGCY</option>
+                                <option value="LINK">LINK</option>
+                                <option value="LSK">LSK</option>
+                                <option value="LTC">LTC</option>
+                                <option value="LUNA">LUNA</option>
+                                <option value="LUNC">LUNC</option>
+                                <option value="MANA">MANA</option>
+                                <option value="MARSH">MARSH</option>
+                                <option value="MATIC">MATIC</option>
+                                <option value="MCO">MCO</option>
+                                <option value="MX">MX</option>
+                                <option value="NANO">NANO</option>
+                                <option value="NEAR">NEAR</option>
+                                <option value="NEO">NEO</option>
+                                <option value="NFTB">NFTB</option>
+                                <option value="NOW">NOW</option>
+                                <option value="NPXS">NPXS</option>
+                                <option value="NTVRK">NTVRK</option>
+                                <option value="NWC">NWC</option>
+                                <option value="OCEAN">OCEAN</option>
+                                <option value="OKB">OKB</option>
+                                <option value="OM">OM</option>
+                                <option value="OMG">OMG</option>
+                                <option value="ONE">ONE</option>
+                                <option value="ONIGI">ONIGI</option>
+                                <option value="ONT">ONT</option>
+                                <option value="PAX">PAX</option>
+                                <option value="PIKA">PIKA</option>
+                                <option value="PIT">PIT</option>
+                                <option value="POODL">POODL</option>
+                                <option value="POOLZ">POOLZ</option>
+                                <option value="QTUM">QTUM</option>
+                                <option value="QUACK">QUACK</option>
+                                <option value="RACA">RACA</option>
+                                <option value="RBIF">RBIF</option>
+                                <option value="REP">REP</option>
+                                <option value="RVN">RVN</option>
+                                <option value="RXCG">RXCG</option>
+                                <option value="SAND">SAND</option>
+                                <option value="SFUND">SFUND</option>
+                                <option value="SHIB">SHIB</option>
+                                <option value="SHIBBSC">SHIBBSC</option>
+                                <option value="SPI">SPI</option>
+                                <option value="SRK">SRK</option>
+                                <option value="STPT">STPT</option>
+                                <option value="STRAX">STRAX</option>
+                                <option value="SUPER">SUPER</option>
+                                <option value="SXPMAINNET">SXPMAINNET</option>
+                                <option value="TENSHI">TENSHI</option>
+                                <option value="TFUEL">TFUEL</option>
+                                <option value="THETA">THETA</option>
+                                <option value="TKO">TKO</option>
+                                <option value="TOMO">TOMO</option>
+                                <option value="TON">TON</option>
+                                <option value="TRVL">TRVL</option>
+                                <option value="TTC">TTC</option>
+                                <option value="TUSD">TUSD</option>
+                                <option value="TUSDTRC20">TUSDTRC20</option>
+                                <option value="UNI">UNI</option>
+                                <option value="USDC">USDC</option>
+                                <option value="USDCMATIC">USDCMATIC</option>
+                                <option value="USDDTRC20">USDDTRC20</option>
+                                <option value="USDP">USDP</option>
+                                <option value="USDT">USDT</option>
+                                <option value="USDTBSC">USDTBSC</option>
+                                <option value="USDTERC20">USDTERC20</option>
+                                <option value="USDTSOL">USDTSOL</option>
+                                <option value="USDTTRC20">USDTTRC20</option>
+                                <option value="UST">UST</option>
+                                <option value="VET">VET</option>
+                                <option value="VIB">VIB</option>
+                                <option value="VOLT">VOLT</option>
+                                <option value="WABI">WABI</option>
+                                <option value="WAVES">WAVES</option>
+                                <option value="XCAD">XCAD</option>
+                                <option value="XCUR">XCUR</option>
+                                <option value="XDC">XDC</option>
+                                <option value="XEM">XEM</option>
+                                <option value="XLM">XLM</option>
+                                <option value="XTZ">XTZ</option>
+                                <option value="XVG">XVG</option>
+                                <option value="XYM">XYM</option>
+                                <option value="XYO">XYO</option>
+                                <option value="XZC">XZC</option>
+                                <option value="YFI">YFI</option>
+                                <option value="ZBC">ZBC</option>
+                                <option value="ZEC">ZEC</option>
+                                <option value="ZEN">ZEN</option>
+                                <option value="ZIL">ZIL</option>
+                            </datalist>
+                        </div>
+                        <img src="./img/first-currency-widget.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h3>Instant Payment Notifications</h3>
+                    </div>
+                    <div class="payment-box Instant Payment">
+                        <div class="secret-key">
+                            <div class="title">
+                                <a href="#">IPN</a>
+                                <h6> secret key</h6>
+                                <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                            </div>
+                            <input class="styles_secretKeyField" type="text" readonly="" value="">
+                        </div>
+                        <div class="payment-btn">
+                            <a href="#">Generate</a>
+                        </div>
+                        <div class="key-info">
+                            <div class="title">
+                                <h5>Recurrent notifications</h5>
+                            </div>
+                            <div class="title">
+                                <h5>Timeout</h5>
+                                <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                            </div>
+                            <input class="styles_timeoutField" type="number" min="0" max="60" value="0">
+                            <div class="title">
+                                <h5>Number of recurrent notifications</h5>
+                                <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                            </div>
+                            <input class="styles_timeoutField" type="number" min="0" max="60" value="0">
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Payment settings</h3>
+                    </div>
+                    <div class="payment-box payment-setting">
+                        <div class="title">
+                            <h5>Network fee optimisation</h5>
+                            <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                        </div>
+                        
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">on</label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                          </div>
+                        <div class="title">
+                            <h5>Payment markup</h5>
+                            <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                        </div>
+                        <input class="common_textField" type="text" id="markup" value="0.00">
+                        <p>The amount can be from 0% to 10%. <br>Put in the percentage including up to 2 decimal places.</p>
+                        <div class="title">
+                            <h5>Payment covering</h5>
+                            <span class="iconify" data-icon="material-symbols:error-circle-rounded"></span>
+                        </div>
+                        <input class="common_textField" type="text" id="covering" value=".0">
+                        <p>The amount can be from 0% to 10%. <br>Put in the percentage including up to 2 decimal places.</p>
+                    </div>
+                    <div class="title">
+                        <h3>Burn SHIB & LEASH</h3>
+                    </div>
+                    <div class="payment-box burn-shib">
+                        <h4>This feature allows you to calculate the exact amount if SHIB/LEASH you need to burn</h4>
+                        <div class="shib-percentage">
+                            <span>SHIB burning percentage mark-up %</span>
+                            <input type="text" class="styles_withoutIcon__2egNS" value="0.0">
+                        </div>
+                        <div class="shib-percentage">
+                            <span>LEASH burning percentage mark-up %</span>
+                            <input type="text" class="styles_withoutIcon__2egNS" value="0.0">
+                        </div>
+                        <div class="payment-btn">
+                            <a href="#">Save changes</a>
+                            <a href="#">Get burning stats</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+     
+        <!--  jquary cdn  -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- add new row -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <!-- iconify -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- my js -->
+        <script src="./js/script.js"></script>
+        <!-- <script>
+            const addRowBtn = document.querySelector(".add-row-btn");
+            const tbody = document.querySelector(".tbody");
+
+                addRowBtn.addEventListener("click",function(e){
+                e.preventDefault();
+                const newItem = document.createElement("tr");
+
+                newItem.innerHTML = `<td><select type="text">
+                        <option value="" disabled="">Select currency</option>
+                        </select></td>
+                        <td><input type="text" value=""></td>
+                        <td class="delete-row"><span class="iconify" data-icon="mdi:bin"></span></td>`;
+
+                tbody.appendChild(newItem);
+                })
+
+                
+                tbody.addEventListener("click", e => {
+                    const clickbtn = e.target.parentElement.parentElement
+                    if (!clickbtn.classList.contains("delete-row")) return;
+                    else{
+                        const itemToRemove = clickbtn.parentElement;
+                        tbody.removeChild(itemToRemove);
+                    }
+                });
+
+        </script> -->
+    </body>
+</html>

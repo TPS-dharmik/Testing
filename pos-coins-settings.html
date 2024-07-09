@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ducument</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+        <!-- my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!-- TAB BUTTON -->
+        <div class="d-flex align-items-start">
+            <div class="aside-menu-bar">
+                <div class="navigation-bar"> 
+                    <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                    <div class="nav flex-column nav-pills">
+                        <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                        <li class="nav-link"><a href="./pos-payments.html"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                        <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-link.html">Payment Link</a></li>
+                                <li class="nav-link"><a href="./pos-donations.html">Donations</a></li>
+                                <li class="nav-link"><a href="./pos-subscriptions.html">Subscriptions</a></li>
+                                <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                        <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                        <li class="nav-link"><a href="./pos-fiat-withdrawals.html"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                        <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                        <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                            <ul class="dropdown_menu">
+                                <li class="nav-link"><a href="./pos-payment-settings.html">Payment settings</a></li>
+                                <li class="nav-link"><a href="./pos-account-settings.html">Account settings</a></li>
+                                <li class="nav-link"><a href="./pos-coins-settings.html" class="active">Coins settings</a></li>
+                            </ul></li>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                        <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                    </ul>
+                    <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+                </div>
+            </div>
+            
+            <!-- coins setting content -->
+            <div class="tab-pane" id="coins-setting">
+                <div class="coins-setting-content">
+                    <div class="title">
+                        <h2>Coins settings</h2>
+                    </div>
+                    <div class="coin-info">
+                        <p>Here, you can choose the cryptocurrencies you want to accept.</p>
+                        <ul>
+                            <li>To choose a coin - simply click on its logo.</li>
+                            <li>If a coin is not chosen, it will not be available for payments through plugins or the donation <br> widget. <br>It will also not be available via invoices without the ‘pay_currency’ parameter specified</li>
+                        </ul>
+                        <p>You can change these settings at any time.</p>
+                    </div>
+                    <div class="search-input">
+                        <span class="iconify" data-icon="ion:search"></span>
+                        <input type="text" placeholder="Type your coin name here" class="search-coin" value="">
+                    </div>
+                    <div class="title">
+                        <h3>Popular coins</h3>
+                        <span>
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="popular-coins">
+                        <div class="coin-box">
+                            <span>BTC</span>
+                            <img src="./img/Coins settings/BTC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ETH</span>
+                            <img src="./img/Coins settings/ETH.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDTTRC20</span>
+                            <img src="./img/Coins settings/USDTTRC20.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BNBBSC</span>
+                            <img src="./img/Coins settings/BNBBSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XRP</span>
+                            <img src="./img/Coins settings/XRP.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ADA</span>
+                            <img src="./img/Coins settings/ADA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SOL</span>
+                            <img src="./img/Coins settings/SOL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>MATICMAINNET</span>
+                            <img src="./img/Coins settings/MATICMAINNET.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TRX</span>
+                            <img src="./img/Coins settings/TRX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AVAXC</span>
+                            <img src="./img/Coins settings/AVAXC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XMR</span>
+                            <img src="./img/Coins settings/XMR.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DGB</span>
+                            <img src="./img/Coins settings/DGB.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Stable coins</h3>
+                        <span>
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="stble-coin">
+                        <div class="coin-box">
+                            <span>USDTTRC20</span>
+                            <img src="./img/Coins settings/USDTTRC20.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BUSDBSC</span>
+                            <img src="./img/Coins settings/BUSDBSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDTERC20</span>
+                            <img src="./img/Coins settings/USDTERC20.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DAI</span>
+                            <img src="./img/Coins settings/DAI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>PAX</span>
+                            <img src="./img/Coins settings/PAX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TUSD</span>
+                            <img src="./img/Coins settings/TUSD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDC</span>
+                            <img src="./img/Coins settings/USDC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDT</span>
+                            <img src="./img/Coins settings/USDT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDTBSC</span>
+                            <img src="./img/Coins settings/USDTBSC.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>Other currencies</h3>
+                        <span>
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="other-currencies">
+                        <div class="coin-box">
+                            <span>LTC</span>
+                            <img src="./img/Coins settings/LTC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BCH</span>
+                            <img src="./img/Coins settings/BCH.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>XVG</span>
+                            <img src="./img/Coins settings/XVG.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>ZEC</span>
+                            <img src="./img/Coins settings/ZEC.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>ZEN</span>
+                            <img src="./img/Coins settings/ZEN.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>ARK</span>
+                            <img src="./img/Coins settings/ARK.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>DOGE</span>
+                            <img src="./img/Coins settings/DOGE.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>TON</span>
+                            <img src="./img/Coins settings/TON.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>FIL</span>
+                            <img src="./img/Coins settings/FIL.svg" alt="">
+                        </div><div class="coin-box">
+                            <span>XTZ</span>
+                            <img src="./img/Coins settings/XTZ.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SHIB</span>
+                            <img src="./img/Coins settings/SHIB.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>EGLD</span>
+                            <img src="./img/Coins settings/EGLD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>STPT</span>
+                            <img src="./img/Coins settings/STPT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SXPMAINNET</span>
+                            <img src="./img/Coins settings/SXPMAINNET.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>UNI</span>
+                            <img src="./img/Coins settings/UNI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GT</span>
+                            <img src="./img/Coins settings/GT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>LINK</span>
+                            <img src="./img/Coins settings/LINK.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>RVN</span>
+                            <img src="./img/Coins settings/RVN.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>EOS</span>
+                            <img src="./img/Coins settings/EOS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FTM</span>
+                            <img src="./img/Coins settings/FTM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>HBAR</span>
+                            <img src="./img/Coins settings/HBAR.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FRONT</span>
+                            <img src="./img/Coins settings/FRONT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>MANA</span>
+                            <img src="./img/Coins settings/MANA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FTMMAINNET</span>
+                            <img src="./img/Coins settings/FTM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>VET</span>
+                            <img src="./img/Coins settings/VET.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FUN</span>
+                            <img src="./img/Coins settings/FUN.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DGD</span>
+                            <img src="./img/Coins settings/DGD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>MCO</span>
+                            <img src="./img/Coins settings/MCO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GAS</span>
+                            <img src="./img/Coins settings/GAS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DAO</span>
+                            <img src="./img/Coins settings/DAO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AE</span>
+                            <img src="./img/Coins settings/AE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>YFI</span>
+                            <img src="./img/Coins settings/YFI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>OKB</span>
+                            <img src="./img/Coins settings/OKB.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NPXS</span>
+                            <img src="./img/Coins settings/NPXS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CRO</span>
+                            <img src="./img/Coins settings/CRO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>OCEAN</span>
+                            <img src="./img/Coins settings/OCEAN.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ONT</span>
+                            <img src="./img/Coins settings/ONT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>LSK</span>
+                            <img src="./img/Coins settings/LSK.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ALGO</span>
+                            <img src="./img/Coins settings/ALGO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>REP</span>
+                            <img src="./img/Coins settings/REP.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AVA</span>
+                            <img src="./img/Coins settings/AVA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GRS</span>
+                            <img src="./img/Coins settings/GRS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>LGCY</span>
+                            <img src="./img/Coins settings/LGCY.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DOT</span>
+                            <img src="./img/Coins settings/DOT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>COTI</span>
+                            <img src="./img/Coins settings/COTI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BTG</span>
+                            <img src="./img/Coins settings/BTG.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BNBMAINNET</span>
+                            <img src="./img/Coins settings/BNBMAINNET.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XLM</span>
+                            <img src="./img/Coins settings/XLM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DASH</span>
+                            <img src="./img/Coins settings/DASH.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ZIL</span>
+                            <img src="./img/Coins settings/ZIL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>WAVES</span>
+                            <img src="./img/Coins settings/WAVES.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NEO</span>
+                            <img src="./img/Coins settings/NEO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XZC</span>
+                            <img src="./img/Coins settings/XZC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FIRO</span>
+                            <img src="./img/Coins settings/FIRO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BCD</span>
+                            <img src="./img/Coins settings/BCD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DCR</span>
+                            <img src="./img/Coins settings/DCR.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>WABI</span>
+                            <img src="./img/Coins settings/WABI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>QTUM</span>
+                            <img src="./img/Coins settings/QTUM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>HT</span>
+                            <img src="./img/Coins settings/HT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BAT</span>
+                            <img src="./img/Coins settings/BAT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KMD</span>
+                            <img src="./img/Coins settings/KMD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BEAM</span>
+                            <img src="./img/Coins settings/BEAM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NANO</span>
+                            <img src="./img/Coins settings/NANO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ETC</span>
+                            <img src="./img/Coins settings/ETC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CTSI</span>
+                            <img src="./img/Coins settings/CTSI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XEM</span>
+                            <img src="./img/Coins settings/XEM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ICX</span>
+                            <img src="./img/Coins settings/ICX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ONE</span>
+                            <img src="./img/Coins settings/ONE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>STRAX</span>
+                            <img src="./img/Coins settings/STRAX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>MATIC</span>
+                            <img src="./img/Coins settings/MATICMAINNET.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BUSDERC20</span>
+                            <img src="./img/Coins settings/BUSDBSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SAND</span>
+                            <img src="./img/Coins settings/SAND.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NOW</span>
+                            <img src="./img/Coins settings/NOW.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XCUR</span>
+                            <img src="./img/Coins settings/XCUR.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>OM</span>
+                            <img src="./img/Coins settings/OM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>VIB</span>
+                            <img src="./img/Coins settings/VIB.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SUPER</span>
+                            <img src="./img/Coins settings/SUPER.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KLV</span>
+                            <img src="./img/Coins settings/KLV.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>HOGE</span>
+                            <img src="./img/Coins settings/HOGE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SRK</span>
+                            <img src="./img/Coins settings/SRK.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GUSD</span>
+                            <img src="./img/Coins settings/GUSD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XYM</span>
+                            <img src="./img/Coins settings/XYM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CHR</span>
+                            <img src="./img/Coins settings/CHR.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FTT</span>
+                            <img src="./img/Coins settings/FTT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>LUNC</span>
+                            <img src="./img/Coins settings/LUNC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NWC</span>
+                            <img src="./img/Coins settings/NWC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KISHU</span>
+                            <img src="./img/Coins settings/KISHU.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AVAX</span>
+                            <img src="./img/Coins settings/AVAX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KEANU</span>
+                            <img src="./img/Coins settings/KEANU.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CAKE</span>
+                            <img src="./img/Coins settings/CAKE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>IOTX</span>
+                            <img src="./img/Coins settings/IOTX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>THETA</span>
+                            <img src="./img/Coins settings/THETA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>IOTA</span>
+                            <img src="./img/Coins settings/IOTA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>HOT</span>
+                            <img src="./img/Coins settings/HOT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>UST</span>
+                            <img src="./img/Coins settings/UST.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>MX</span>
+                            <img src="./img/Coins settings/MX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TFUEL</span>
+                            <img src="./img/Coins settings/TFUEL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>LUNA</span>
+                            <img src="./img/Coins settings/LUNA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDP</span>
+                            <img src="./img/Coins settings/PAX.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FEG</span>
+                            <img src="./img/Coins settings/FEG.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KNC</span>
+                            <img src="./img/Coins settings/KNC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AXS</span>
+                            <img src="./img/Coins settings/AXS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>C98</span>
+                            <img src="./img/Coins settings/C98.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CHZ</span>
+                            <img src="./img/Coins settings/CHZ.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AAVE</span>
+                            <img src="./img/Coins settings/AAVE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CVC</span>
+                            <img src="./img/Coins settings/CVC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ENJ</span>
+                            <img src="./img/Coins settings/ENJ.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GRT</span>
+                            <img src="./img/Coins settings/GRT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>LEASH</span>
+                            <img src="./img/Coins settings/LEASH.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FLOKI</span>
+                            <img src="./img/Coins settings/FLOKI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TKO</span>
+                            <img src="./img/Coins settings/TKO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>OMG</span>
+                            <img src="./img/Coins settings/OMG.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CNS</span>
+                            <img src="./img/Coins settings/CNS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GSPI</span>
+                            <img src="./img/Coins settings/GSPI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ATOM</span>
+                            <img src="./img/Coins settings/ATOM.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SPI</span>
+                            <img src="./img/Coins settings/SPI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TRVL</span>
+                            <img src="./img/Coins settings/TRVL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>RXCG</span>
+                            <img src="./img/Coins settings/RXCG.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BABYDOGE</span>
+                            <img src="./img/Coins settings/BABYDOGE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AVAERC20</span>
+                            <img src="./img/Coins settings/AVA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XYO</span>
+                            <img src="./img/Coins settings/XYO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>POODL</span>
+                            <img src="./img/Coins settings/POODL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BEL</span>
+                            <img src="./img/Coins settings/BEL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ARPA</span>
+                            <img src="./img/Coins settings/ARPA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AVABSC</span>
+                            <img src="./img/Coins settings/AVA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NEAR</span>
+                            <img src="./img/Coins settings/NEAR.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FLUF</span>
+                            <img src="./img/Coins settings/FLUF.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NTVRK</span>
+                            <img src="./img/Coins settings/NTVRK.png" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>RACA</span>
+                            <img src="./img/Coins settings/RACA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SFUND</span>
+                            <img src="./img/Coins settings/SFUND.png" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KLAY</span>
+                            <img src="./img/Coins settings/KLAY.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GALAERC20</span>
+                            <img src="./img/Coins settings/GALAERC20.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XDC</span>
+                            <img src="./img/Coins settings/XDC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KIBABSC</span>
+                            <img src="./img/Coins settings/KIBABSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>PIT</span>
+                            <img src="./img/Coins settings/PIT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BRISE</span>
+                            <img src="./img/Coins settings/BRISE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>NFTB</span>
+                            <img src="./img/Coins settings/NFTB.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>RBIF</span>
+                            <img src="./img/Coins settings/RBIF.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>POOLZ</span>
+                            <img src="./img/Coins settings/POOLZ.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>SHIBBSC</span>
+                            <img src="./img/Coins settings/SHIB.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BLOCKS</span>
+                            <img src="./img/Coins settings/BLOCKS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>AVN</span>
+                            <img src="./img/Coins settings/AVN.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CUDOS</span>
+                            <img src="./img/Coins settings/CUDOS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>MARSH</span>
+                            <img src="./img/Coins settings/MARSH.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BIFI</span>
+                            <img src="./img/Coins settings/BIFI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ILV</span>
+                            <img src="./img/Coins settings/ILV.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>KIBA</span>
+                            <img src="./img/Coins settings/KIBABSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ARV</span>
+                            <img src="./img/Coins settings/ARV.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>1INCH</span>
+                            <img src="./img/Coins settings/1INCH.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>VOLT</span>
+                            <img src="./img/Coins settings/VOLT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CULT</span>
+                            <img src="./img/Coins settings/CULT.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>1INCHBSC</span>
+                            <img src="./img/Coins settings/1INCHBSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TOMO</span>
+                            <img src="./img/Coins settings/TOMO.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>APE</span>
+                            <img src="./img/Coins settings/APE.png" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GHC</span>
+                            <img src="./img/Coins settings/GHC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>HOTCROSS</span>
+                            <img src="./img/Coins settings/HOTCROSS.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ETHBSC</span>
+                            <img src="./img/Coins settings/ETH.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>PIKA</span>
+                            <img src="./img/Coins settings/PIKA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>XCAD</span>
+                            <img src="./img/Coins settings/XCAD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GAFA</span>
+                            <img src="./img/Coins settings/GAFA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BTFA</span>
+                            <img src="./img/Coins settings/BTFA.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BTTCBSC</span>
+                            <img src="./img/Coins settings/BTTCBSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TENSHI</span>
+                            <img src="./img/Coins settings/TENSHI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BTTC</span>
+                            <img src="./img/Coins settings/BTTC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GAL</span>
+                            <img src="./img/Coins settings/GAL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDCMATIC</span>
+                            <img src="./img/Coins settings/USDCMATIC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DGMOON</span>
+                            <img src="./img/Coins settings/DGMOON.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ETHW</span>
+                            <img src="./img/Coins settings/ETHW.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GUARD</span>
+                            <img src="./img/Coins settings/GUARD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FLOKIBSC</span>
+                            <img src="./img/Coins settings/FLOKI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>GGTKN</span>
+                            <img src="./img/Coins settings/GGTKN.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DOGECOIN</span>
+                            <img src="./img/Coins settings/DOGECOIN.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDDTRC20</span>
+                            <img src="./img/Coins settings/USDDTRC20.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>USDTSOL</span>
+                            <img src="./img/Coins settings/USDTSOL.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>QUACK</span>
+                            <img src="./img/Coins settings/QUACK.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TTC</span>
+                            <img src="./img/Coins settings/TTC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BONE</span>
+                            <img src="./img/Coins settings/BONE.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>DIVI</span>
+                            <img src="./img/Coins settings/DIVI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BSV</span>
+                            <img src="./img/Coins settings/BSV.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ONIGI</span>
+                            <img src="./img/Coins settings/ONIGI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>TUSDTRC20</span>
+                            <img src="./img/Coins settings/TUSDTRC20.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>JASMY</span>
+                            <img src="./img/Coins settings/JASMY.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>BRGBSC</span>
+                            <img src="./img/Coins settings/BRGBSC.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>FITFI</span>
+                            <img src="./img/Coins settings/FITFI.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>CUSD</span>
+                            <img src="./img/Coins settings/CUSD.svg" alt="">
+                        </div>
+                        <div class="coin-box">
+                            <span>ZBC</span>
+                            <img src="./img/Coins settings/ZBC.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+     
+        <!--  jquary cdn  -->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <!-- iconify -->
+        <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+        <!-- my js -->
+        <script src="./js/script.js"></script>
+    
+    </body>
+</html>

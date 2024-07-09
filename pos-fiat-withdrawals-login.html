@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ducument</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css?ver=6.0.1">
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!-- TAB BUTTON -->
+    <div class="d-flex align-items-start">
+        <div class="aside-menu-bar">
+            <div class="navigation-bar"> 
+                <h2 class="main-logo"><span>NOW</span>Payments</h2>
+                <div class="nav flex-column nav-pills">
+                    <li class="nav-link"><a href="./pos-dashboard.html"><span class="iconify" data-icon="uil:calender"></span>Transaction History</a></li>
+                    <li class="nav-link"><a href="./pos-payments.html"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>Payments</a></li>
+                    <li class="nav-link  dropdown_btn"><span class="iconify" data-icon="et:tools"></span>Payment Tools<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                        <ul class="dropdown_menu">
+                            <li class="nav-link"><a href="./pos-payment-link.html">Payment Link</a></li>
+                            <li class="nav-link"><a href="./pos-donations.html">Donations</a></li>
+                            <li class="nav-link"><a href="./pos-subscriptions.html">Subscriptions</a></li>
+                            <li class="nav-link"selected="false"><a href="./pos-terminal-links.html">POS Terminal link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-link"><a href="./pos-custody.html"><span class="iconify" data-icon="ph:shield-check"></span>Custody</a></li>
+                    <li class="nav-link"><a href="./pos-mass-payouts.html"><span class="iconify" data-icon="material-symbols:upload-rounded"></span>Mass Payouts</a></li>
+                    <li class="nav-link"><a href="./pos-fiat-withdrawals.html" class="active"><span class="iconify" data-icon="icon-park-outline:handbag"></span>Fiat Withdrawals</a></li>
+                    <li class="nav-link"><a href="./pos-affiliate-program.html"><span class="iconify" data-icon="ph:user-circle"></span>Affiliate Program</a></li>
+                    <li class="nav-link dropdown_btn"><span class="iconify" data-icon="ant-design:setting-outlined"></span>Settings<span class="iconify drop-icon" data-icon="material-symbols:arrow-drop-down-rounded"></span>
+                        <ul class="dropdown_menu">
+                            <li class="nav-link"><a href="./pos-payment-settings.html">Payment settings</a></li>
+                            <li class="nav-link"><a href="./pos-account-settings.html">Account settings</a></li>
+                            <li class="nav-link"><a href="./pos-coins-settings.html">Coins settings</a></li>
+                        </ul></li>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <ul>
+                    <li><a href="#"><span class="iconify" data-icon="mdi:clipboard-list-outline"></span>API Docs</a></li>
+                    <li><a href="./sign-in.html"><span class="iconify" data-icon="gridicons:sign-out"></span>Sign Out</a></li>
+                </ul>
+                <p><a href="#">support@nowpayments.io</a>2023 © NOWPayments</p>
+            </div>
+        </div>
+        <!-- pos-fiat-withdrawals-login -->
+        <div class="tab-pane" id="pos-fiat-withdrawals-login">
+            <div class="fiat-login-content">
+                <div class="title">
+                    <h2>Fiat Withdrawals <span class="iconify" data-icon="material-symbols:error-circle-rounded-outline" style="color: #ccc;" data-width="17"></span></h2>
+                </div>
+                <div class="pos-fiat-withdrawals-login-form">
+                    <form>
+                        <div class="post-fiat-withdrawals-login-form-faild">
+                            <label>Switсhere e-mail <span class="iconify" data-icon="material-symbols:error-circle-rounded-outline" style="color: #ccc;" data-width="13"></span></label>
+                            <input type="email" name="email" placeholder="Email you used to register on Switchere">
+                        </div>
+                        <div class="post-fiat-withdrawals-login-form-faild">
+                            <label>IBAN <span class="iconify" data-icon="material-symbols:error-circle-rounded-outline" style="color: #ccc;" data-width="13"></span></label>
+                            <input type="text" name="text" placeholder="e.g.: BY20 OLMP 3135 0000 0010 0000 0933">
+                        </div>
+                        <div class="post-fiat-withdrawals-login-form-faild">
+                            <label>Country</label>
+                            <div class="mm-dropdown withdrawals-login">
+                                <div class="textfirst">Choose your country<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png" width="10" height="10" class="down" /></div>
+                                <ul class="withdrawals-login-list" style="display: none;">
+                                    <li class="input-option" style="display: none;">
+                                        Aland Islands <img src="./img/country-flags/ax.svg" width="28" height="16" alt="AX">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Albania <img src="./img/country-flags/al.svg" width="28" height="16" alt="AL">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Algeria <img src="./img/country-flags/dz.svg" width="28" height="16" alt="DZ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Andorra <img src="./img/country-flags/ad.svg" width="28" height="16" alt="AD">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Angola <img src="./img/country-flags/ao.svg" width="28" height="16" alt="AO">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Anguilla <img src="./img/country-flags/ai.svg" width="28" height="16" alt="AI">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Antarctica <img src="./img/country-flags/aq.svg" width="28" height="16" alt="AQ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Antigua and Barbuda <img src="./img/country-flags/ag.svg" width="28" height="16" alt="AG">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Argentina <img src="./img/country-flags/ar.svg" width="28" height="16" alt="AR">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Armenia <img src="./img/country-flags/am.svg" width="28" height="16" alt="AM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Aruba <img src="./img/country-flags/aw.svg" width="28" height="16" alt="AW">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Australia <img src="./img/country-flags/au.svg" width="28" height="16" alt="AU">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Austria <img src="./img/country-flags/at.svg" width="28" height="16" alt="AT">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Azerbaijan <img src="./img/country-flags/az.svg" width="28" height="16" alt="AZ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Bahrain <img src="./img/country-flags/bh.svg" width="28" height="16" alt="BH">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Barbados <img src="./img/country-flags/bb.svg" width="28" height="16" alt="BB">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Belgium <img src="./img/country-flags/be.svg" width="28" height="16" alt="BE">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Belize <img src="./img/country-flags/bz.svg" width="28" height="16" alt="BZ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Benin <img src="./img/country-flags/bj.svg" width="28" height="16" alt="BJ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Bermuda <img src="./img/country-flags/bm.svg" width="28" height="16" alt="BM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Bhutan <img src="./img/country-flags/bt.svg" width="28" height="16" alt="BT">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Bonaire <img src="./img/country-flags/bq.svg" width="28" height="16" alt="BQ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Bouvet Island <img src="./img/country-flags/bv.svg" width="28" height="16" alt="BV">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Brazil <img src="./img/country-flags/br.svg" width="28" height="16" alt="BR">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        British Indian Ocean Territory <img src="./img/country-flags/io.svg" width="28" height="16" alt="IO">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        British Virgin Islands <img src="./img/country-flags/vg.svg" width="28" height="16" alt="VG">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Brunei Darussalam <img src="./img/country-flags/bn.svg" width="28" height="16" alt="BN">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Bulgaria <img src="./img/country-flags/bg.svg" width="28" height="16" alt="BG">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Burkina Faso <img src="./img/country-flags/bf.svg" width="28" height="16" alt="BF">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Burundi <img src="./img/country-flags/bi.svg" width="28" height="16" alt="BI">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cambodia <img src="./img/country-flags/kh.svg" width="28" height="16" alt="KH">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cameroon <img src="./img/country-flags/cm.svg" width="28" height="16" alt="CM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Canada <img src="./img/country-flags/ca.svg" width="28" height="16" alt="CA">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cape Verde <img src="./img/country-flags/cv.svg" width="28" height="16" alt="CV">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cayman Islands <img src="./img/country-flags/ky.svg" width="28" height="16" alt="KY">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Central African Republic <img src="./img/country-flags/cf.svg" width="28" height="16" alt="CF">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Chad <img src="./img/country-flags/td.svg" width="28" height="16" alt="TD">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Chile <img src="./img/country-flags/cl.svg" width="28" height="16" alt="CL">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Christmas Island <img src="./img/country-flags/cx.svg" width="28" height="16" alt="CX">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cocos (Keeling) Islands <img src="./img/country-flags/cc.svg" width="28" height="16" alt="CC">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Colombia <img src="./img/country-flags/co.svg" width="28" height="16" alt="CO">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Comoros <img src="./img/country-flags/km.svg" width="28" height="16" alt="KM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Congo <img src="./img/country-flags/cg.svg" width="28" height="16" alt="CG">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cook Islands <img src="./img/country-flags/ck.svg" width="28" height="16" alt="CK">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Costa Rica <img src="./img/country-flags/cr.svg" width="28" height="16" alt="CR">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cote d'Ivoire <img src="./img/country-flags/ci.svg" width="28" height="16" alt="CI">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Croatia <img src="./img/country-flags/hr.svg" width="28" height="16" alt="HR">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Curacao <img src="./img/country-flags/cw.svg" width="28" height="16" alt="CW">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Cyprus <img src="./img/country-flags/cy.svg" width="28" height="16" alt="CY">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Czech Republic <img src="./img/country-flags/cz.svg" width="28" height="16" alt="CZ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Denmark <img src="./img/country-flags/dk.svg" width="28" height="16" alt="DK">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Djibouti <img src="./img/country-flags/dj.svg" width="28" height="16" alt="DJ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Dominica <img src="./img/country-flags/dm.svg" width="28" height="16" alt="DM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Dominican Republic <img src="./img/country-flags/do.svg" width="28" height="16" alt="DO">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Egypt <img src="./img/country-flags/eg.svg" width="28" height="16" alt="EG">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        El Salvador <img src="./img/country-flags/sv.svg" width="28" height="16" alt="SV">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Equatorial Guinea <img src="./img/country-flags/gq.svg" width="28" height="16" alt="GQ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Eritrea <img src="./img/country-flags/er.svg" width="28" height="16" alt="ER">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Estonia <img src="./img/country-flags/ee.svg" width="28" height="16" alt="EE">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Falkland Islands (Malvinas) <img src="./img/country-flags/fk.svg" width="28" height="16" alt="FK">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Faroe Islands <img src="./img/country-flags/fo.svg" width="28" height="16" alt="FO">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Fiji <img src="./img/country-flags/fj.svg" width="28" height="16" alt="FJ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Finland <img src="./img/country-flags/fi.svg" width="28" height="16" alt="FI">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        France <img src="./img/country-flags/fr.svg" width="28" height="16" alt="FR">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        French Guiana <img src="./img/country-flags/gf.svg" width="28" height="16" alt="GF">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        French Polynesia <img src="./img/country-flags/pf.svg" width="28" height="16" alt="PF">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        French Southern Territories <img src="./img/country-flags/tf.svg" width="28" height="16" alt="TF">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Gabon <img src="./img/country-flags/ga.svg" width="28" height="16" alt="GA">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Gambia <img src="./img/country-flags/gm.svg" width="28" height="16" alt="GM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Georgia <img src="./img/country-flags/ge.svg" width="28" height="16" alt="GE">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Germany <img src="./img/country-flags/de.svg" width="28" height="16" alt="DE">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Gibraltar <img src="./img/country-flags/gi.svg" width="28" height="16" alt="GI">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Greece <img src="./img/country-flags/gr.svg" width="28" height="16" alt="GR">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Greenland <img src="./img/country-flags/gl.svg" width="28" height="16" alt="GL">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Grenada <img src="./img/country-flags/gd.svg" width="28" height="16" alt="GD">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Guadeloupe <img src="./img/country-flags/gp.svg" width="28" height="16" alt="GP">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Guatemala <img src="./img/country-flags/gt.svg" width="28" height="16" alt="GT">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Guernsey <img src="./img/country-flags/gg.svg" width="28" height="16" alt="GG">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Guinea <img src="./img/country-flags/gn.svg" width="28" height="16" alt="GN">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Guinea-Bissau <img src="./img/country-flags/gw.svg" width="28" height="16" alt="GW">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Haiti <img src="./img/country-flags/ht.svg" width="28" height="16" alt="HT">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Heard Island and McDonald Mcdonald Islands <img src="./img/country-flags/hm.svg" width="28" height="16" alt="HM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Holy See (Vatican City State) <img src="./img/country-flags/va.svg" width="28" height="16" alt="VA">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Honduras <img src="./img/country-flags/hn.svg" width="28" height="16" alt="HN">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Hong Kong <img src="./img/country-flags/hk.svg" width="28" height="16" alt="HK">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Hungary <img src="./img/country-flags/hu.svg" width="28" height="16" alt="HU">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Iceland <img src="./img/country-flags/is.svg" width="28" height="16" alt="IS">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        India <img src="./img/country-flags/in.svg" width="28" height="16" alt="IN">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Indonesia <img src="./img/country-flags/id.svg" width="28" height="16" alt="ID">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Ireland <img src="./img/country-flags/ie.svg" width="28" height="16" alt="IE">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Isle of Man <img src="./img/country-flags/im.svg" width="28" height="16" alt="IM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Israel <img src="./img/country-flags/il.svg" width="28" height="16" alt="IL">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Italy <img src="./img/country-flags/it.svg" width="28" height="16" alt="IT">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Jamaica <img src="./img/country-flags/jm.svg" width="28" height="16" alt="JM">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Japan <img src="./img/country-flags/jp.svg" width="28" height="16" alt="JP">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Jersey <img src="./img/country-flags/je.svg" width="28" height="16" alt="JE">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Jordan <img src="./img/country-flags/jo.svg" width="28" height="16" alt="JO">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Kazakhstan <img src="./img/country-flags/kz.svg" width="28" height="16" alt="KZ">
+                                    </li>
+                                    <li class="input-option" style="display: none;">
+                                        Kenya <img src="./img/country-flags/ke.svg" width="28" height="16" alt="KE">
+                                    </li>
+                                </ul>
+                                <input type="hidden" class="option" name="namesubmit" value="" />
+                            </div>
+                        </div>
+                        <div class="post-fiat-withdrawals-login-form-faild">
+                            <label>City</label>
+                            <input type="text" name="text" placeholder="e.g.: Berlin">
+                        </div>
+                        <div class="post-fiat-withdrawals-login-form-faild">
+                            <label>Postcode</label>
+                            <input type="text" name="text" placeholder="e.g.: 52066">
+                        </div>
+                        <div class="post-fiat-withdrawals-login-form-faild">
+                            <label>Billing address</label>
+                            <input type="text" name="text" placeholder="e.g.: Warmweihestrasse 35">
+                        </div>
+                        <div class="post-fiat-withdrawals-login-form-button">
+                            <a class="submit-button" type="submit">Submit</a>
+                            <a class="back-button" href="./pos-fiat-withdrawals.html">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--  jquary cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <!-- iconify -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- my js -->
+    <script src="./js/script.js"></script>
+    <script>
+        $(function() {
+        // Set
+        var main = $('div.mm-dropdown .textfirst')
+        var li = $('div.mm-dropdown > ul > li.input-option')
+        var inputoption = $("div.mm-dropdown .option")
+        var default_text = 'Choose your country <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png" width="10" height="10" class="down" />';
+      
+        // Animation
+        main.click(function() {
+          main.html(default_text);
+          li.toggle('fast');
+        });
+      
+        // Insert Data
+        li.click(function() {
+          // hide
+          li.toggle('fast');
+          var livalue = $(this).data('value');
+          var lihtml = $(this).html();
+          main.html(lihtml);
+          inputoption.val(livalue);
+        });
+        $(".textfirst,.input-option").click(function(){
+            $(".withdrawals-login-list").toggle();
+        });
+      });
+      </script>
+</body>
+</html>
